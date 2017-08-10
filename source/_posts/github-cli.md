@@ -212,3 +212,8 @@ git commit --amend
 ```
 
 Then change the name of the commit
+
+
+## How to track a remote branch to local branch
+
+## How to solve `fatal: refusing to merge unrelated histories`
