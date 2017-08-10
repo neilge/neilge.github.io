@@ -13,7 +13,7 @@ By stating what dependencies a module needs, webpack can use this information to
 Loaders are transformations that are applied on a resource file of your app. They are functions (running in node.js) that take the source of a resource file as the parameter and return the new source.
 
 For example, you can use loaders to tell webpack to load CoffeeScript or JSX.
-
+<!-- more -->
 ```js
 	module: {
 		loaders: [

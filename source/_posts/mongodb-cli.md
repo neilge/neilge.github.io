@@ -16,7 +16,7 @@ tags: MongoDB
   ```sql
   show collections
   ```
-
+<!-- more -->
 3. show all data in specific db
 
   ```sql
@@ -36,19 +36,19 @@ tags: MongoDB
   ```
 
 6. create collection
-  
+
   ```sql
   db.createCollection(name, options)
   ```
 
 7. drop collection
-  
+
   ```sql
   db.COLLECTION_NAME.drop()
   ```
 
 8. insert data
-  
+
   ```sql
   db.COLLECTION_NAME.insert(document)
   db.collection.insertMany([documents])
@@ -66,7 +66,7 @@ tags: MongoDB
   })
   ```
 9. query data
-  
+
   ```sql
   db.mycol.find().pretty()
 
@@ -94,7 +94,7 @@ tags: MongoDB
   ).pretty()
   ```
 10. update data
-  
+
   ```sql
   db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA)
 
@@ -110,17 +110,17 @@ tags: MongoDB
 
 11. delete document
   remove one
-  
+
   ```sql
   db.COLLECTION_NAME.remove(DELETION_CRITERIA,1)
   ```
   remove all
-  
+
   ```sql
   db.mycol.drop()
   ```
 12. projection
-  
+
   ```sql
   db.COLLECTION_NAME.find({},{KEY:1})
   ```
@@ -133,13 +133,13 @@ tags: MongoDB
   ```
 
 14. sort
-  
+
   ```sql
   db.COLLECTION_NAME.find().sort({KEY:1})
   ```
 
 15. index
-  
+
   ```sql
   db.COLLECTION_NAME.ensureIndex({KEY:1})
   ```

@@ -8,7 +8,7 @@ tags: Sass
 
 ##Variables
 
-Sass uses the `$` symbol to make something a variable. 
+Sass uses the `$` symbol to make something a variable.
 
 ```scss
 $font-stack:    Helvetica, sans-serif;
@@ -22,7 +22,7 @@ body {
 
 ## Nesting
 Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware that overly nested rules will result in over-qualified CSS that could prove hard to maintain and is generally considered bad practice.
-
+<!-- more -->
 ```scss
 nav {
   ul {
@@ -67,12 +67,12 @@ body {
   background-color: #efefef;
 }
 ```
-Notice we're using `@import 'reset';` in the `base.scss` file. When you import a file you don't need to include the file extension `.scss`. 
+Notice we're using `@import 'reset';` in the `base.scss` file. When you import a file you don't need to include the file extension `.scss`.
 
 
 ## Mixins
 
-To create a mixin you use the `@mixin` directive and give it a name. We've named our mixin `border-radius`. We're also using the variable `$radius` inside the parentheses so we can pass in a radius of whatever we want. After you create your mixin, you can then use it as a CSS declaration starting with `@include` followed by the name of the mixin. 
+To create a mixin you use the `@mixin` directive and give it a name. We've named our mixin `border-radius`. We're also using the variable `$radius` inside the parentheses so we can pass in a radius of whatever we want. After you create your mixin, you can then use it as a CSS declaration starting with `@include` followed by the name of the mixin.
 
 ```scss
 @mixin border-radius($radius) {

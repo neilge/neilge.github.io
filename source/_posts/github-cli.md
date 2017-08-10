@@ -11,30 +11,31 @@ tags: Github
 
 ### Create a git local repository and track to a remote repository
 
-1. **create a local repository** 
+1. **create a local repository**
 	- go to the folder that contain the files that we want to add to repository
 	- `git init`: create a local repository
 	- add some files into the current directory
 	- `git add <filename>` or `git add .`: add a file or add all files to the staging environment
 	- `git commit -m "<commit message>"`: commit the files into local repository
 2. **build a remote repository**
+<!-- more -->
 	- sign in the github account
 	- click **+ New repository** button
 	- and create a repository as instruction
-3. **track the local repository to remote** 
+3. **track the local repository to remote**
 	- `git remote add <alias> <url>`: add a remote, `<alias>` is always set as `origin` and `<url>` is the http url copied from github
 	- `git push -u <alias> <branch>`: push the content in the local repository to the remote, here, `<alias>` is always set as `origin` and `<branch>` is the branch that we want to push e.g. `master`
 	- after tracking the local repository to the remote one, we can just use `git push` to push the commit to the remote
 
-	
+
 ### Clone a project from github and sync the branches
 
 1. **clone the project from remote**
 	- `git clone <url>`: to clone the remote repository to local the default setting is only cloning the `master` branch
-2. **Sync the branches**	
+2. **Sync the branches**
 	- `git checkout -b <local branch name> <alias>/<remote branch name>` clone a branch from github, e.g. `git checkout -b sched_mutex origin/sched_mutex`
 	- if we want to sync all the branch at one time we can use the following command
-	
+
 		```bash
 		git clone --mirror https://github.com/NilGE/weenix.git .git
 		git config --bool core.bare false
@@ -42,10 +43,10 @@ tags: Github
 		```
 3. **only clone one specific branch**
 	- `git clone -b <branch_name> <url>`
-		
+
 ### Fetch, merge and pull
 1. `git fetch <alias>`: fetch from remote
-2. `git merge <other branch>`: merge other branch to the current branch, the `other branch` can be a remote branch 
+2. `git merge <other branch>`: merge other branch to the current branch, the `other branch` can be a remote branch
 	- how to solve the conflict:
 		//TODO:
 3. `git pull`: `git fetch` + `git merge`
@@ -70,7 +71,7 @@ tags: Github
 
 ### Rebase
 1. first we have serval commits
-	
+
 	```vim
 	e19a59e change 3
 	5c02763 change 2
@@ -87,7 +88,7 @@ tags: Github
 	pick 9cc0c67 change 1
 	pick 5c02763 change 2
 	pick e19a59e change 3
-	
+
 	# Rebase 5f71846..e19a59e onto 5f71846 (3 command(s))
 	#
 	# Commands:
@@ -108,7 +109,7 @@ tags: Github
 	# Note that empty commits are commented out
 	```
 4. we change the commands with direction, so that we can squash all three commits to one and rename the commit
-	
+
 	```vim
 	reword 9cc0c67 change 1
 	squash 5c02763 change 2
@@ -116,18 +117,18 @@ tags: Github
 	```
 5. Another file popup and we can rename the commit here
 
-	change 
-	
+	change
+
 	```vim
 	change 1
 	```
 	to
-	
+
 	```vim
 	total change three
 	```
 6. The confirmation file popup and after we close it, we finish rebasing
-	
+
 	```vim
 	38e2f09 total change three
 	5f71846 second commit
@@ -135,8 +136,8 @@ tags: Github
 	e8b2bfe change total five
 	dc2da89 first commit
 	```
-	
-	
+
+
 ### Patch
 The goal of patching is patch serveral commits from one branch and apply the patch to another branch
 
@@ -150,7 +151,7 @@ The goal of patching is patch serveral commits from one branch and apply the pat
 	dc2da89 first commit
 	```
 2. Then we create a new branch 'newbranch' and make several commits
-	
+
 	```bash
 	git checkout -b newbranch
 	```
@@ -164,7 +165,7 @@ The goal of patching is patch serveral commits from one branch and apply the pat
 	e8b2bfe change total five
 	dc2da89 first commit
 	```
-3. we patch the last three commits with command 
+3. we patch the last three commits with command
 
 	```bash
 	git format-patch master --stdout > last_three.patch
@@ -174,24 +175,24 @@ The goal of patching is patch serveral commits from one branch and apply the pat
 	*  We can change master with SHA1, so that we can make the patch from any commit
 
 4. Check the content of the patch
-	
+
 	```bash
-	git apply --stat last_three.patch 
+	git apply --stat last_three.patch
 	```
 	If we don’t get any errors, the patch can be applied cleanly. Otherwise we may see what trouble we'll run into.
 
 5. Checkout to master branch and apply this patch
-	
+
 	```bash
 	git checkout master
-	git am --signoff < last_three.patch 
+	git am --signoff < last_three.patch
 	```
 	```vim
 	Applying: change 1
 	Applying: change 2
 	Applying: change 3
 	```
-	
+
 
 
 ### Common commands
@@ -201,7 +202,7 @@ The goal of patching is patch serveral commits from one branch and apply the pat
 	- `git log --oneline`
 	- `git log --graph`
 2. **status**
-	- `git status` 
+	- `git status`
 
 
 ## Accidentally commit a file taht should be ignored
