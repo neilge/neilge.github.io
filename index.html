@@ -254,6 +254,685 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/10/useful-site/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/10/useful-site/" itemprop="url">Useful Website</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-10T00:15:36-04:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><ul>
+<li><a href="https://jsonplaceholder.typicode.com/" target="_blank" rel="external">JSONPlaceholder</a>: Fake Online REST API for Testing and Prototyping</li>
+<li><a href="http://www.yestone.com/" target="_blank" rel="external">Yestone</a>: 图片字体素材库</li>
+<li><a href="https://fizzle.co/sparkline/50-sites-free-images-fonts-icons-blog" target="_blank" rel="external">Image sources and tutorials</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/10/webpack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/10/webpack/" itemprop="url">Webpack</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-10T00:14:17-04:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>webpack is a module bundler</strong></p>
+<p>By stating what dependencies a module needs, webpack can use this information to build a dependency graph. It then uses the graph to generate an optimized bundle where scripts will be executed in the correct order. Also unused dependencies will not be included in the bundle.</p>
+<h2 id="What-are-loaders"><a href="#What-are-loaders" class="headerlink" title="What are loaders?"></a>What are loaders?</h2><p>Loaders are transformations that are applied on a resource file of your app. They are functions (running in node.js) that take the source of a resource file as the parameter and return the new source.</p>
+<p>For example, you can use loaders to tell webpack to load CoffeeScript or JSX.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">	loaders: [</div><div class="line">		&#123;</div><div class="line">			test: <span class="regexp">/\.json$/</span>,</div><div class="line">			include: __dirname + <span class="string">'/client'</span>,</div><div class="line">			loader: <span class="string">'json-loader'</span></div><div class="line">		&#125;,</div><div class="line">		&#123;</div><div class="line">			test: <span class="regexp">/\.js$/</span>,</div><div class="line">			exclude: <span class="regexp">/node_modules/</span>,</div><div class="line">			loaders: [<span class="string">'react-hot'</span>, <span class="string">'babel'</span>]</div><div class="line">		&#125;</div><div class="line">	]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="What-is-JSX"><a href="#What-is-JSX" class="headerlink" title="What is JSX"></a>What is JSX</h2><p>JSX is a preprocessor step that adds XML syntax to JavaScript. You can definitely use React without JSX but JSX makes React a lot more elegant.</p>
+<p>Just like XML, JSX tags have a tag name, attributes, and children. If an attribute value is enclosed in quotes, the value is a string. Otherwise, wrap the value in braces and the value is the enclosed JavaScript expression.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;div className=<span class="string">"red"</span>&gt;Children Text&lt;<span class="regexp">/div&gt;;</span></div><div class="line"><span class="regexp">&lt;MyCounter count=&#123;3 + 5&#125; /</span>&gt;;</div><div class="line"></div><div class="line"><span class="comment">// Here, we set the "scores" attribute below to a JavaScript object.</span></div><div class="line"><span class="keyword">var</span> gameScores = &#123;</div><div class="line">  player1: <span class="number">2</span>,</div><div class="line">  player2: <span class="number">5</span></div><div class="line">&#125;;</div><div class="line">&lt;DashboardUnit data-index=<span class="string">"2"</span>&gt;</div><div class="line">  &lt;h1&gt;Scores&lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">  &lt;Scoreboard className="results" scores=&#123;gameScores&#125; /</span>&gt;</div><div class="line">&lt;<span class="regexp">/DashboardUnit&gt;;</span></div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/10/sass/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/10/sass/" itemprop="url">Sass</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-10T00:12:00-04:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##Variables</p>
+<p>Sass uses the <code>$</code> symbol to make something a variable. </p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$font-stack</span>:    Helvetica, sans-serif;</div><div class="line"><span class="variable">$primary-color</span>: <span class="number">#333</span>;</div><div class="line"></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">font</span>: <span class="number">100%</span> <span class="variable">$font-stack</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="variable">$primary-color</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Nesting"><a href="#Nesting" class="headerlink" title="Nesting"></a>Nesting</h2><p>Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware that overly nested rules will result in over-qualified CSS that could prove hard to maintain and is generally considered bad practice.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">nav</span> &#123;</div><div class="line">  <span class="selector-tag">ul</span> &#123;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">list-style</span>: none;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="selector-tag">li</span> &#123; <span class="attribute">display</span>: inline-block; &#125;</div><div class="line"></div><div class="line">  <span class="selector-tag">a</span> &#123;</div><div class="line">    <span class="attribute">display</span>: block;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">6px</span> <span class="number">12px</span>;</div><div class="line">    <span class="attribute">text-decoration</span>: none;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Partials-and-Import"><a href="#Partials-and-Import" class="headerlink" title="Partials and Import"></a>Partials and Import</h2><p>CSS has an <code>import</code> option that lets you split your CSS into smaller, more maintainable portions. The only drawback is that each time you use <code>@import</code> in CSS it creates another HTTP request.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// _reset.scss</span></div><div class="line"></div><div class="line"><span class="selector-tag">html</span>,</div><div class="line"><span class="selector-tag">body</span>,</div><div class="line"><span class="selector-tag">ul</span>,</div><div class="line"><span class="selector-tag">ol</span> &#123;</div><div class="line">   <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// base.scss</span></div><div class="line"></div><div class="line">@<span class="keyword">import</span> <span class="string">'reset'</span>;</div><div class="line"></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">font</span>: <span class="number">100%</span> Helvetica, sans-serif;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#efefef</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Notice we’re using <code>@import &#39;reset&#39;;</code> in the <code>base.scss</code> file. When you import a file you don’t need to include the file extension <code>.scss</code>. </p>
+<h2 id="Mixins"><a href="#Mixins" class="headerlink" title="Mixins"></a>Mixins</h2><p>To create a mixin you use the <code>@mixin</code> directive and give it a name. We’ve named our mixin <code>border-radius</code>. We’re also using the variable <code>$radius</code> inside the parentheses so we can pass in a radius of whatever we want. After you create your mixin, you can then use it as a CSS declaration starting with <code>@include</code> followed by the name of the mixin. </p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">mixin</span> border-radius(<span class="variable">$radius</span>) &#123;</div><div class="line">  -webkit-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">     -moz-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">      -ms-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">          <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.box</span> &#123; @<span class="keyword">include</span> border-radius(<span class="number">10px</span>); &#125;</div></pre></td></tr></table></figure>
+<h2 id="Extend-Inheritance"><a href="#Extend-Inheritance" class="headerlink" title="Extend/Inheritance"></a>Extend/Inheritance</h2><p>This is one of the most useful features of Sass. Using <code>@extend</code> lets you share a set of CSS properties from one selector to another. It helps keep your Sass very DRY. In our example we’re going to create a simple series of messaging for errors, warnings and successes.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.message</span> &#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#333</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.success</span> &#123;</div><div class="line">  @<span class="keyword">extend</span> .message;</div><div class="line">  <span class="attribute">border-color</span>: green;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.error</span> &#123;</div><div class="line">  @<span class="keyword">extend</span> .message;</div><div class="line">  <span class="attribute">border-color</span>: red;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.warning</span> &#123;</div><div class="line">  @<span class="keyword">extend</span> .message;</div><div class="line">  <span class="attribute">border-color</span>: yellow;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h2><p>Doing math in your CSS is very helpful. Sass has a handful of standard math operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code>. In our example we’re going to do some simple math to calculate widths for an <code>aside</code> &amp; <code>article</code>.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span> &#123; <span class="attribute">width</span>: <span class="number">100%</span>; &#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="selector-tag">article</span><span class="selector-attr">[role="main"]</span> &#123;</div><div class="line">  <span class="attribute">float</span>: left;</div><div class="line">  <span class="attribute">width</span>: <span class="number">600px</span> / <span class="number">960px</span> * <span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">aside</span><span class="selector-attr">[role="complementary"]</span> &#123;</div><div class="line">  <span class="attribute">float</span>: right;</div><div class="line">  <span class="attribute">width</span>: <span class="number">300px</span> / <span class="number">960px</span> * <span class="number">100%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/10/react-n-redux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/10/react-n-redux/" itemprop="url">React and Redux</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-10T00:08:11-04:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Origin Resourse from <a href="http://www.thegreatcodeadventure.com/building-a-simple-crud-app-with-react-redux-part-1/" target="_blank" rel="external">Building a Simple CRUD App with React + Redux</a></p>
+<h2 id="The-advantage-of-React"><a href="#The-advantage-of-React" class="headerlink" title="The advantage of React"></a>The advantage of React</h2><p>React is fast. It uses the virtual DOM to track the state of the actual DOM, only re-rendering discrete sections of the DOM as changes to application state dictate.</p>
+<p>But where I really started to see the advantages of React was in the flow of data through the application, in the purely Data Down Actions Up system of maintaining application state.</p>
+<p>In React, your components can have both state and properties. A component’s properties should be considered <strong>immutable</strong>. Instead of a component responding to a user’s action by updating it’s own properties, it will send an action that updates the entire application’s state, which in turn triggers a re-render of a component, updating that component’s properties as a result.</p>
+<p><img src="/2017/08/10/react-n-redux/react-diagram.png" alt="state and props"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/10/mongodb-cli/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/10/mongodb-cli/" itemprop="url">MongoDB Cli</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-10T00:04:50-04:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Mongodb-operation"><a href="#Mongodb-operation" class="headerlink" title="Mongodb operation"></a>Mongodb operation</h2><ol>
+<li><p>show all the dbs</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> dbs</div></pre></td></tr></table></figure>
+</li>
+<li><p>show all the collections in db</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> collections</div></pre></td></tr></table></figure>
+</li>
+<li><p>show all data in specific db</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.DATABASE_NAME.find().pretty()</div></pre></td></tr></table></figure>
+</li>
+<li><p>create a databse</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> DATABASE_NAME</div></pre></td></tr></table></figure>
+</li>
+<li><p>drop a database</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.dropDatabase()</div></pre></td></tr></table></figure>
+</li>
+<li><p>create collection</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.createCollection(name, options)</div></pre></td></tr></table></figure>
+</li>
+<li><p>drop collection</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.drop()</div></pre></td></tr></table></figure>
+</li>
+<li><p>insert data</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.insert(document)</div><div class="line">db.collection.insertMany([documents])</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">db.mycol.insert(&#123;</div><div class="line">   _id: ObjectId(7df78ad8902c),</div><div class="line">   title: 'MongoDB Overview',</div><div class="line">   description: 'MongoDB is no sql database',</div><div class="line">   by: 'tutorials point',</div><div class="line">   url: 'http://www.tutorialspoint.com',</div><div class="line">   tags: ['mongodb', 'database', 'NoSQL'],</div><div class="line">   likes: 100</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>query data</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">db.mycol.find().pretty()</div><div class="line"></div><div class="line">db.mycol.find(&#123;"by":"tutorials point"&#125;).pretty()</div><div class="line">db.mycol.find(&#123;"likes":&#123;$lt:50&#125;&#125;).pretty()</div><div class="line">db.mycol.find(&#123;"likes":&#123;$lte:50&#125;&#125;).pretty()</div><div class="line">db.mycol.find(&#123;"likes":&#123;$gt:50&#125;&#125;).pretty()</div><div class="line">db.mycol.find(&#123;"likes":&#123;$gte:50&#125;&#125;).pretty()</div><div class="line">db.mycol.find(&#123;"likes":&#123;$ne:50&#125;&#125;).pretty()</div><div class="line"></div><div class="line">b.mycol.find(</div><div class="line">   &#123;</div><div class="line">      $and: [</div><div class="line">         &#123;key1: value1&#125;, &#123;key2:value2&#125;</div><div class="line">      ]</div><div class="line">   &#125;</div><div class="line">).pretty()</div><div class="line"></div><div class="line">db.mycol.find(</div><div class="line">   &#123;</div><div class="line">      $or: [</div><div class="line">         &#123;key1: value1&#125;, &#123;key2:value2&#125;</div><div class="line">      ]</div><div class="line">   &#125;</div><div class="line">).pretty()</div></pre></td></tr></table></figure>
+</li>
+<li><p>update data</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA)</div><div class="line"></div><div class="line">db.mycol.update(&#123;'title':'MongoDB Overview'&#125;,&#123;$set:&#123;'title':'New MongoDB Tutorial'&#125;&#125;)</div><div class="line"></div><div class="line">db.mycol.save(</div><div class="line">   &#123;</div><div class="line">      "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point New Topic",</div><div class="line">         "by":"Tutorials Point"</div><div class="line">   &#125;</div><div class="line">)</div></pre></td></tr></table></figure>
+</li>
+<li><p>delete document<br>remove one</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.remove(DELETION_CRITERIA,1)</div></pre></td></tr></table></figure>
+<p>remove all</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.mycol.drop()</div></pre></td></tr></table></figure>
+</li>
+<li><p>projection</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.find(&#123;&#125;,&#123;KEY:1&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>limit</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.find().limit(NUMBER)</div><div class="line">db.COLLECTION_NAME.find().limit(NUMBER).skip(NUMBER)</div></pre></td></tr></table></figure>
+</li>
+<li><p>sort</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.find().sort(&#123;KEY:1&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>index</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.ensureIndex(&#123;KEY:1&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">db.users.insertMany([</div><div class="line">  &#123;item: "lamp", qty: 50, type: "desk" &#125;,</div><div class="line">  &#123;item: "lamp", qty: 20, type: "floor" &#125;,</div><div class="line">  &#123;item: "bulk", qty: 100 &#125;</div><div class="line">])</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">db.userLocal.insertMany([</div><div class="line">    &#123;username: "nilge", email: "gexiangy@usc.edu", password: "123456"&#125;,</div><div class="line">    &#123;username: "sophie", email: "huiwenzhe@usc.edu", password: "654321"&#125;</div><div class="line">])</div></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/09/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -668,7 +1347,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -681,7 +1360,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
