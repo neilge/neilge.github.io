@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Neil&#39;s Blog">
 <meta property="og:description" content="webpack is a module bundler By stating what dependencies a module needs, webpack can use this information to build a dependency graph. It then uses the graph to generate an optimized bundle where scri">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-10T04:38:43.000Z">
+<meta property="og:updated_time" content="2017-08-10T12:38:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Webpack">
 <meta name="twitter:description" content="webpack is a module bundler By stating what dependencies a module needs, webpack can use this information to build a dependency graph. It then uses the graph to generate an optimized bundle where scri">
@@ -327,8 +327,7 @@
         <p><strong>webpack is a module bundler</strong></p>
 <p>By stating what dependencies a module needs, webpack can use this information to build a dependency graph. It then uses the graph to generate an optimized bundle where scripts will be executed in the correct order. Also unused dependencies will not be included in the bundle.</p>
 <h2 id="What-are-loaders"><a href="#What-are-loaders" class="headerlink" title="What are loaders?"></a>What are loaders?</h2><p>Loaders are transformations that are applied on a resource file of your app. They are functions (running in node.js) that take the source of a resource file as the parameter and return the new source.</p>
-<p>For example, you can use loaders to tell webpack to load CoffeeScript or JSX.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">	loaders: [</div><div class="line">		&#123;</div><div class="line">			test: <span class="regexp">/\.json$/</span>,</div><div class="line">			include: __dirname + <span class="string">'/client'</span>,</div><div class="line">			loader: <span class="string">'json-loader'</span></div><div class="line">		&#125;,</div><div class="line">		&#123;</div><div class="line">			test: <span class="regexp">/\.js$/</span>,</div><div class="line">			exclude: <span class="regexp">/node_modules/</span>,</div><div class="line">			loaders: [<span class="string">'react-hot'</span>, <span class="string">'babel'</span>]</div><div class="line">		&#125;</div><div class="line">	]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>For example, you can use loaders to tell webpack to load CoffeeScript or JSX.<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">	loaders: [</div><div class="line">		&#123;</div><div class="line">			test: <span class="regexp">/\.json$/</span>,</div><div class="line">			include: __dirname + <span class="string">'/client'</span>,</div><div class="line">			loader: <span class="string">'json-loader'</span></div><div class="line">		&#125;,</div><div class="line">		&#123;</div><div class="line">			test: <span class="regexp">/\.js$/</span>,</div><div class="line">			exclude: <span class="regexp">/node_modules/</span>,</div><div class="line">			loaders: [<span class="string">'react-hot'</span>, <span class="string">'babel'</span>]</div><div class="line">		&#125;</div><div class="line">	]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="What-is-JSX"><a href="#What-is-JSX" class="headerlink" title="What is JSX"></a>What is JSX</h2><p>JSX is a preprocessor step that adds XML syntax to JavaScript. You can definitely use React without JSX but JSX makes React a lot more elegant.</p>
 <p>Just like XML, JSX tags have a tag name, attributes, and children. If an attribute value is enclosed in quotes, the value is a string. Otherwise, wrap the value in braces and the value is the enclosed JavaScript expression.</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;div className=<span class="string">"red"</span>&gt;Children Text&lt;<span class="regexp">/div&gt;;</span></div><div class="line"><span class="regexp">&lt;MyCounter count=&#123;3 + 5&#125; /</span>&gt;;</div><div class="line"></div><div class="line"><span class="comment">// Here, we set the "scores" attribute below to a JavaScript object.</span></div><div class="line"><span class="keyword">var</span> gameScores = &#123;</div><div class="line">  player1: <span class="number">2</span>,</div><div class="line">  player2: <span class="number">5</span></div><div class="line">&#125;;</div><div class="line">&lt;DashboardUnit data-index=<span class="string">"2"</span>&gt;</div><div class="line">  &lt;h1&gt;Scores&lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">  &lt;Scoreboard className="results" scores=&#123;gameScores&#125; /</span>&gt;</div><div class="line">&lt;<span class="regexp">/DashboardUnit&gt;;</span></div></pre></td></tr></table></figure>
@@ -453,7 +452,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -465,10 +464,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">tags</span>
-              
+              </a>
             </div>
           
 

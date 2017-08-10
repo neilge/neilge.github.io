@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="Terminology working directory staging environment repository  Create a git local repository and track to a remote repository create a local repository  go to the folder that contain the files that we">
+<meta name="description" content="Terminology working directory staging environment repository  Create a git local repository and track to a remote repository create a local repository go to the folder that contain the files that we w">
 <meta name="keywords" content="Github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github CLI">
 <meta property="og:url" content="http://neilge.github.io/2017/08/09/github-cli/index.html">
 <meta property="og:site_name" content="Neil&#39;s Blog">
-<meta property="og:description" content="Terminology working directory staging environment repository  Create a git local repository and track to a remote repository create a local repository  go to the folder that contain the files that we">
+<meta property="og:description" content="Terminology working directory staging environment repository  Create a git local repository and track to a remote repository create a local repository go to the folder that contain the files that we w">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-10T02:39:11.000Z">
+<meta property="og:updated_time" content="2017-08-10T12:36:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github CLI">
-<meta name="twitter:description" content="Terminology working directory staging environment repository  Create a git local repository and track to a remote repository create a local repository  go to the folder that contain the files that we">
+<meta name="twitter:description" content="Terminology working directory staging environment repository  Create a git local repository and track to a remote repository create a local repository go to the folder that contain the files that we w">
 
 
 
@@ -330,7 +330,7 @@
 <li>repository</li>
 </ol>
 <h3 id="Create-a-git-local-repository-and-track-to-a-remote-repository"><a href="#Create-a-git-local-repository-and-track-to-a-remote-repository" class="headerlink" title="Create a git local repository and track to a remote repository"></a>Create a git local repository and track to a remote repository</h3><ol>
-<li><strong>create a local repository</strong> <ul>
+<li><strong>create a local repository</strong><ul>
 <li>go to the folder that contain the files that we want to add to repository</li>
 <li><code>git init</code>: create a local repository</li>
 <li>add some files into the current directory</li>
@@ -338,13 +338,14 @@
 <li><code>git commit -m &quot;&lt;commit message&gt;&quot;</code>: commit the files into local repository</li>
 </ul>
 </li>
-<li><strong>build a remote repository</strong><ul>
+<li><strong>build a remote repository</strong><a id="more"></a>
+<ul>
 <li>sign in the github account</li>
 <li>click <strong>+ New repository</strong> button</li>
 <li>and create a repository as instruction</li>
 </ul>
 </li>
-<li><strong>track the local repository to remote</strong> <ul>
+<li><strong>track the local repository to remote</strong><ul>
 <li><code>git remote add &lt;alias&gt; &lt;url&gt;</code>: add a remote, <code>&lt;alias&gt;</code> is always set as <code>origin</code> and <code>&lt;url&gt;</code> is the http url copied from github</li>
 <li><code>git push -u &lt;alias&gt; &lt;branch&gt;</code>: push the content in the local repository to the remote, here, <code>&lt;alias&gt;</code> is always set as <code>origin</code> and <code>&lt;branch&gt;</code> is the branch that we want to push e.g. <code>master</code></li>
 <li>after tracking the local repository to the remote one, we can just use <code>git push</code> to push the commit to the remote</li>
@@ -356,7 +357,7 @@
 <li><code>git clone &lt;url&gt;</code>: to clone the remote repository to local the default setting is only cloning the <code>master</code> branch</li>
 </ul>
 </li>
-<li><p><strong>Sync the branches</strong>    </p>
+<li><p><strong>Sync the branches</strong></p>
 <ul>
 <li><code>git checkout -b &lt;local branch name&gt; &lt;alias&gt;/&lt;remote branch name&gt;</code> clone a branch from github, e.g. <code>git checkout -b sched_mutex origin/sched_mutex</code></li>
 <li><p>if we want to sync all the branch at one time we can use the following command</p>
@@ -372,7 +373,7 @@
 </ol>
 <h3 id="Fetch-merge-and-pull"><a href="#Fetch-merge-and-pull" class="headerlink" title="Fetch, merge and pull"></a>Fetch, merge and pull</h3><ol>
 <li><code>git fetch &lt;alias&gt;</code>: fetch from remote</li>
-<li><code>git merge &lt;other branch&gt;</code>: merge other branch to the current branch, the <code>other branch</code> can be a remote branch <ul>
+<li><code>git merge &lt;other branch&gt;</code>: merge other branch to the current branch, the <code>other branch</code> can be a remote branch<ul>
 <li>how to solve the conflict:<br>  //TODO:</li>
 </ul>
 </li>
@@ -409,7 +410,7 @@
  <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">reword <span class="number">9</span>cc0c67 <span class="keyword">change</span> <span class="number">1</span></div><div class="line">squash <span class="number">5</span>c02763 <span class="keyword">change</span> <span class="number">2</span></div><div class="line">squash e19a59e <span class="keyword">change</span> <span class="number">3</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>Another file popup and we can rename the commit here</p>
-<p> change </p>
+<p> change</p>
  <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">change</span> <span class="number">1</span></div></pre></td></tr></table></figure>
 <p> to</p>
  <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">total <span class="keyword">change</span> three</div></pre></td></tr></table></figure>
@@ -427,7 +428,7 @@
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b newbranch</div></pre></td></tr></table></figure>
  <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="number">6700</span>a4d <span class="keyword">change</span> <span class="number">3</span></div><div class="line">c345e71 <span class="keyword">change</span> <span class="number">2</span></div><div class="line">fac8e80 <span class="keyword">change</span> <span class="number">1</span></div><div class="line"><span class="number">38</span>e2f09 total <span class="keyword">change</span> three</div><div class="line"><span class="number">5</span>f71846 second commit</div><div class="line"><span class="number">8</span>e2e1ee <span class="keyword">change</span> six</div><div class="line">e8b2bfe <span class="keyword">change</span> total five</div><div class="line">dc2da89 <span class="keyword">first</span> commit</div></pre></td></tr></table></figure>
 </li>
-<li><p>we patch the last three commits with command </p>
+<li><p>we patch the last three commits with command</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git format-patch master --stdout &gt; last_three.patch</div></pre></td></tr></table></figure>
 <ul>
 <li>The above command means we patch the result of diff between current branch and master branch and combine all the commits into one patches</li>
@@ -452,7 +453,7 @@
 </ul>
 </li>
 <li><strong>status</strong><ul>
-<li><code>git status</code> </li>
+<li><code>git status</code></li>
 </ul>
 </li>
 </ol>
@@ -494,8 +495,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/09/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/10/mongodb-cli/" rel="prev" title="MongoDB Cli">
+                MongoDB Cli <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -573,7 +574,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -585,10 +586,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">tags</span>
-              
+              </a>
             </div>
           
 

@@ -448,17 +448,17 @@
 
       
         
-          
-            <p><strong>webpack is a module bundler</strong></p>
+          <p><strong>webpack is a module bundler</strong></p>
 <p>By stating what dependencies a module needs, webpack can use this information to build a dependency graph. It then uses the graph to generate an optimized bundle where scripts will be executed in the correct order. Also unused dependencies will not be included in the bundle.</p>
 <h2 id="What-are-loaders"><a href="#What-are-loaders" class="headerlink" title="What are loaders?"></a>What are loaders?</h2><p>Loaders are transformations that are applied on a resource file of your app. They are functions (running in node.js) that take the source of a resource file as the parameter and return the new source.</p>
-<p>For example, you can use loaders to tell webpack to load CoffeeScript or JSX.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">	loaders: [</div><div class="line">		&#123;</div><div class="line">			test: <span class="regexp">/\.json$/</span>,</div><div class="line">			include: __dirname + <span class="string">'/client'</span>,</div><div class="line">			loader: <span class="string">'json-loader'</span></div><div class="line">		&#125;,</div><div class="line">		&#123;</div><div class="line">			test: <span class="regexp">/\.js$/</span>,</div><div class="line">			exclude: <span class="regexp">/node_modules/</span>,</div><div class="line">			loaders: [<span class="string">'react-hot'</span>, <span class="string">'babel'</span>]</div><div class="line">		&#125;</div><div class="line">	]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="What-is-JSX"><a href="#What-is-JSX" class="headerlink" title="What is JSX"></a>What is JSX</h2><p>JSX is a preprocessor step that adds XML syntax to JavaScript. You can definitely use React without JSX but JSX makes React a lot more elegant.</p>
-<p>Just like XML, JSX tags have a tag name, attributes, and children. If an attribute value is enclosed in quotes, the value is a string. Otherwise, wrap the value in braces and the value is the enclosed JavaScript expression.</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;div className=<span class="string">"red"</span>&gt;Children Text&lt;<span class="regexp">/div&gt;;</span></div><div class="line"><span class="regexp">&lt;MyCounter count=&#123;3 + 5&#125; /</span>&gt;;</div><div class="line"></div><div class="line"><span class="comment">// Here, we set the "scores" attribute below to a JavaScript object.</span></div><div class="line"><span class="keyword">var</span> gameScores = &#123;</div><div class="line">  player1: <span class="number">2</span>,</div><div class="line">  player2: <span class="number">5</span></div><div class="line">&#125;;</div><div class="line">&lt;DashboardUnit data-index=<span class="string">"2"</span>&gt;</div><div class="line">  &lt;h1&gt;Scores&lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">  &lt;Scoreboard className="results" scores=&#123;gameScores&#125; /</span>&gt;</div><div class="line">&lt;<span class="regexp">/DashboardUnit&gt;;</span></div></pre></td></tr></table></figure>
-
-          
+<p>For example, you can use loaders to tell webpack to load CoffeeScript or JSX.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/webpack/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -575,24 +575,17 @@
 
       
         
-          
-            <p>##Variables</p>
-<p>Sass uses the <code>$</code> symbol to make something a variable. </p>
+          <p>##Variables</p>
+<p>Sass uses the <code>$</code> symbol to make something a variable.</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$font-stack</span>:    Helvetica, sans-serif;</div><div class="line"><span class="variable">$primary-color</span>: <span class="number">#333</span>;</div><div class="line"></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">font</span>: <span class="number">100%</span> <span class="variable">$font-stack</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="variable">$primary-color</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Nesting"><a href="#Nesting" class="headerlink" title="Nesting"></a>Nesting</h2><p>Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware that overly nested rules will result in over-qualified CSS that could prove hard to maintain and is generally considered bad practice.</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">nav</span> &#123;</div><div class="line">  <span class="selector-tag">ul</span> &#123;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">list-style</span>: none;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="selector-tag">li</span> &#123; <span class="attribute">display</span>: inline-block; &#125;</div><div class="line"></div><div class="line">  <span class="selector-tag">a</span> &#123;</div><div class="line">    <span class="attribute">display</span>: block;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">6px</span> <span class="number">12px</span>;</div><div class="line">    <span class="attribute">text-decoration</span>: none;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Partials-and-Import"><a href="#Partials-and-Import" class="headerlink" title="Partials and Import"></a>Partials and Import</h2><p>CSS has an <code>import</code> option that lets you split your CSS into smaller, more maintainable portions. The only drawback is that each time you use <code>@import</code> in CSS it creates another HTTP request.</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// _reset.scss</span></div><div class="line"></div><div class="line"><span class="selector-tag">html</span>,</div><div class="line"><span class="selector-tag">body</span>,</div><div class="line"><span class="selector-tag">ul</span>,</div><div class="line"><span class="selector-tag">ol</span> &#123;</div><div class="line">   <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// base.scss</span></div><div class="line"></div><div class="line">@<span class="keyword">import</span> <span class="string">'reset'</span>;</div><div class="line"></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">font</span>: <span class="number">100%</span> Helvetica, sans-serif;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#efefef</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Notice we’re using <code>@import &#39;reset&#39;;</code> in the <code>base.scss</code> file. When you import a file you don’t need to include the file extension <code>.scss</code>. </p>
-<h2 id="Mixins"><a href="#Mixins" class="headerlink" title="Mixins"></a>Mixins</h2><p>To create a mixin you use the <code>@mixin</code> directive and give it a name. We’ve named our mixin <code>border-radius</code>. We’re also using the variable <code>$radius</code> inside the parentheses so we can pass in a radius of whatever we want. After you create your mixin, you can then use it as a CSS declaration starting with <code>@include</code> followed by the name of the mixin. </p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">mixin</span> border-radius(<span class="variable">$radius</span>) &#123;</div><div class="line">  -webkit-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">     -moz-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">      -ms-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">          <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.box</span> &#123; @<span class="keyword">include</span> border-radius(<span class="number">10px</span>); &#125;</div></pre></td></tr></table></figure>
-<h2 id="Extend-Inheritance"><a href="#Extend-Inheritance" class="headerlink" title="Extend/Inheritance"></a>Extend/Inheritance</h2><p>This is one of the most useful features of Sass. Using <code>@extend</code> lets you share a set of CSS properties from one selector to another. It helps keep your Sass very DRY. In our example we’re going to create a simple series of messaging for errors, warnings and successes.</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.message</span> &#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#333</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.success</span> &#123;</div><div class="line">  @<span class="keyword">extend</span> .message;</div><div class="line">  <span class="attribute">border-color</span>: green;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.error</span> &#123;</div><div class="line">  @<span class="keyword">extend</span> .message;</div><div class="line">  <span class="attribute">border-color</span>: red;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.warning</span> &#123;</div><div class="line">  @<span class="keyword">extend</span> .message;</div><div class="line">  <span class="attribute">border-color</span>: yellow;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h2><p>Doing math in your CSS is very helpful. Sass has a handful of standard math operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code>. In our example we’re going to do some simple math to calculate widths for an <code>aside</code> &amp; <code>article</code>.</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span> &#123; <span class="attribute">width</span>: <span class="number">100%</span>; &#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="selector-tag">article</span><span class="selector-attr">[role="main"]</span> &#123;</div><div class="line">  <span class="attribute">float</span>: left;</div><div class="line">  <span class="attribute">width</span>: <span class="number">600px</span> / <span class="number">960px</span> * <span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">aside</span><span class="selector-attr">[role="complementary"]</span> &#123;</div><div class="line">  <span class="attribute">float</span>: right;</div><div class="line">  <span class="attribute">width</span>: <span class="number">300px</span> / <span class="number">960px</span> * <span class="number">100%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
+<h2 id="Nesting"><a href="#Nesting" class="headerlink" title="Nesting"></a>Nesting</h2><p>Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware that overly nested rules will result in over-qualified CSS that could prove hard to maintain and is generally considered bad practice.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/sass/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -709,14 +702,16 @@
 
       
         
-          
-            <p>Origin Resourse from <a href="http://www.thegreatcodeadventure.com/building-a-simple-crud-app-with-react-redux-part-1/" target="_blank" rel="external">Building a Simple CRUD App with React + Redux</a></p>
+          <p>Origin Resourse from <a href="http://www.thegreatcodeadventure.com/building-a-simple-crud-app-with-react-redux-part-1/" target="_blank" rel="external">Building a Simple CRUD App with React + Redux</a></p>
 <h2 id="The-advantage-of-React"><a href="#The-advantage-of-React" class="headerlink" title="The advantage of React"></a>The advantage of React</h2><p>React is fast. It uses the virtual DOM to track the state of the actual DOM, only re-rendering discrete sections of the DOM as changes to application state dictate.</p>
-<p>But where I really started to see the advantages of React was in the flow of data through the application, in the purely Data Down Actions Up system of maintaining application state.</p>
-<p>In React, your components can have both state and properties. A component’s properties should be considered <strong>immutable</strong>. Instead of a component responding to a user’s action by updating it’s own properties, it will send an action that updates the entire application’s state, which in turn triggers a re-render of a component, updating that component’s properties as a result.</p>
-<p><img src="/2017/08/10/react-n-redux/react-diagram.png" alt="state and props"></p>
-
-          
+<p>But where I really started to see the advantages of React was in the flow of data through the application, in the purely Data Down Actions Up system of maintaining application state.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/react-n-redux/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -833,188 +828,21 @@
 
       
         
-          
-            <h2 id="Mongodb-operation"><a href="#Mongodb-operation" class="headerlink" title="Mongodb operation"></a>Mongodb operation</h2><ol>
+          <h2 id="Mongodb-operation"><a href="#Mongodb-operation" class="headerlink" title="Mongodb operation"></a>Mongodb operation</h2><ol>
 <li><p>show all the dbs</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> dbs</div></pre></td></tr></table></figure>
 </li>
 <li><p>show all the collections in db</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> collections</div></pre></td></tr></table></figure>
 </li>
-<li><p>show all data in specific db</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.DATABASE_NAME.find().pretty()</div></pre></td></tr></table></figure>
-</li>
-<li><p>create a databse</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> DATABASE_NAME</div></pre></td></tr></table></figure>
-</li>
-<li><p>drop a database</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.dropDatabase()</div></pre></td></tr></table></figure>
-</li>
-<li><p>create collection</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.createCollection(name, options)</div></pre></td></tr></table></figure>
-</li>
-<li><p>drop collection</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.drop()</div></pre></td></tr></table></figure>
-</li>
-<li><p>insert data</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.insert(document)</div><div class="line">db.collection.insertMany([documents])</div></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">db.mycol.insert(&#123;</div><div class="line">   _id: ObjectId(7df78ad8902c),</div><div class="line">   title: 'MongoDB Overview',</div><div class="line">   description: 'MongoDB is no sql database',</div><div class="line">   by: 'tutorials point',</div><div class="line">   url: 'http://www.tutorialspoint.com',</div><div class="line">   tags: ['mongodb', 'database', 'NoSQL'],</div><div class="line">   likes: 100</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-<li><p>query data</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">db.mycol.find().pretty()</div><div class="line"></div><div class="line">db.mycol.find(&#123;"by":"tutorials point"&#125;).pretty()</div><div class="line">db.mycol.find(&#123;"likes":&#123;$lt:50&#125;&#125;).pretty()</div><div class="line">db.mycol.find(&#123;"likes":&#123;$lte:50&#125;&#125;).pretty()</div><div class="line">db.mycol.find(&#123;"likes":&#123;$gt:50&#125;&#125;).pretty()</div><div class="line">db.mycol.find(&#123;"likes":&#123;$gte:50&#125;&#125;).pretty()</div><div class="line">db.mycol.find(&#123;"likes":&#123;$ne:50&#125;&#125;).pretty()</div><div class="line"></div><div class="line">b.mycol.find(</div><div class="line">   &#123;</div><div class="line">      $and: [</div><div class="line">         &#123;key1: value1&#125;, &#123;key2:value2&#125;</div><div class="line">      ]</div><div class="line">   &#125;</div><div class="line">).pretty()</div><div class="line"></div><div class="line">db.mycol.find(</div><div class="line">   &#123;</div><div class="line">      $or: [</div><div class="line">         &#123;key1: value1&#125;, &#123;key2:value2&#125;</div><div class="line">      ]</div><div class="line">   &#125;</div><div class="line">).pretty()</div></pre></td></tr></table></figure>
-</li>
-<li><p>update data</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA)</div><div class="line"></div><div class="line">db.mycol.update(&#123;'title':'MongoDB Overview'&#125;,&#123;$set:&#123;'title':'New MongoDB Tutorial'&#125;&#125;)</div><div class="line"></div><div class="line">db.mycol.save(</div><div class="line">   &#123;</div><div class="line">      "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point New Topic",</div><div class="line">         "by":"Tutorials Point"</div><div class="line">   &#125;</div><div class="line">)</div></pre></td></tr></table></figure>
-</li>
-<li><p>delete document<br>remove one</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.remove(DELETION_CRITERIA,1)</div></pre></td></tr></table></figure>
-<p>remove all</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.mycol.drop()</div></pre></td></tr></table></figure>
-</li>
-<li><p>projection</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.find(&#123;&#125;,&#123;KEY:1&#125;)</div></pre></td></tr></table></figure>
-</li>
-<li><p>limit</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.find().limit(NUMBER)</div><div class="line">db.COLLECTION_NAME.find().limit(NUMBER).skip(NUMBER)</div></pre></td></tr></table></figure>
-</li>
-<li><p>sort</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.find().sort(&#123;KEY:1&#125;)</div></pre></td></tr></table></figure>
-</li>
-<li><p>index</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.COLLECTION_NAME.ensureIndex(&#123;KEY:1&#125;)</div></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">db.users.insertMany([</div><div class="line">  &#123;item: "lamp", qty: 50, type: "desk" &#125;,</div><div class="line">  &#123;item: "lamp", qty: 20, type: "floor" &#125;,</div><div class="line">  &#123;item: "bulk", qty: 100 &#125;</div><div class="line">])</div></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">db.userLocal.insertMany([</div><div class="line">    &#123;username: "nilge", email: "gexiangy@usc.edu", password: "123456"&#125;,</div><div class="line">    &#123;username: "sophie", email: "huiwenzhe@usc.edu", password: "654321"&#125;</div><div class="line">])</div></pre></td></tr></table></figure></li>
 </ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/09/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Neil">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/09/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-09T20:44:19-04:00">
-                2017-08-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/mongodb-cli/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1131,14 +959,13 @@
 
       
         
-          
-            <h3 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h3><ol>
+          <h3 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h3><ol>
 <li>working directory</li>
 <li>staging environment</li>
 <li>repository</li>
 </ol>
 <h3 id="Create-a-git-local-repository-and-track-to-a-remote-repository"><a href="#Create-a-git-local-repository-and-track-to-a-remote-repository" class="headerlink" title="Create a git local repository and track to a remote repository"></a>Create a git local repository and track to a remote repository</h3><ol>
-<li><strong>create a local repository</strong> <ul>
+<li><strong>create a local repository</strong><ul>
 <li>go to the folder that contain the files that we want to add to repository</li>
 <li><code>git init</code>: create a local repository</li>
 <li>add some files into the current directory</li>
@@ -1146,128 +973,14 @@
 <li><code>git commit -m &quot;&lt;commit message&gt;&quot;</code>: commit the files into local repository</li>
 </ul>
 </li>
-<li><strong>build a remote repository</strong><ul>
-<li>sign in the github account</li>
-<li>click <strong>+ New repository</strong> button</li>
-<li>and create a repository as instruction</li>
-</ul>
-</li>
-<li><strong>track the local repository to remote</strong> <ul>
-<li><code>git remote add &lt;alias&gt; &lt;url&gt;</code>: add a remote, <code>&lt;alias&gt;</code> is always set as <code>origin</code> and <code>&lt;url&gt;</code> is the http url copied from github</li>
-<li><code>git push -u &lt;alias&gt; &lt;branch&gt;</code>: push the content in the local repository to the remote, here, <code>&lt;alias&gt;</code> is always set as <code>origin</code> and <code>&lt;branch&gt;</code> is the branch that we want to push e.g. <code>master</code></li>
-<li>after tracking the local repository to the remote one, we can just use <code>git push</code> to push the commit to the remote</li>
-</ul>
-</li>
-</ol>
-<h3 id="Clone-a-project-from-github-and-sync-the-branches"><a href="#Clone-a-project-from-github-and-sync-the-branches" class="headerlink" title="Clone a project from github and sync the branches"></a>Clone a project from github and sync the branches</h3><ol>
-<li><strong>clone the project from remote</strong><ul>
-<li><code>git clone &lt;url&gt;</code>: to clone the remote repository to local the default setting is only cloning the <code>master</code> branch</li>
-</ul>
-</li>
-<li><p><strong>Sync the branches</strong>    </p>
-<ul>
-<li><code>git checkout -b &lt;local branch name&gt; &lt;alias&gt;/&lt;remote branch name&gt;</code> clone a branch from github, e.g. <code>git checkout -b sched_mutex origin/sched_mutex</code></li>
-<li><p>if we want to sync all the branch at one time we can use the following command</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> --mirror https://github.com/NilGE/weenix.git .git</div><div class="line">git config --bool core.bare <span class="literal">false</span></div><div class="line">git reset --hard</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p><strong>only clone one specific branch</strong></p>
-<ul>
-<li><code>git clone -b &lt;branch_name&gt; &lt;url&gt;</code></li>
-</ul>
-</li>
-</ol>
-<h3 id="Fetch-merge-and-pull"><a href="#Fetch-merge-and-pull" class="headerlink" title="Fetch, merge and pull"></a>Fetch, merge and pull</h3><ol>
-<li><code>git fetch &lt;alias&gt;</code>: fetch from remote</li>
-<li><code>git merge &lt;other branch&gt;</code>: merge other branch to the current branch, the <code>other branch</code> can be a remote branch <ul>
-<li>how to solve the conflict:<br>  //TODO:</li>
-</ul>
-</li>
-<li><code>git pull</code>: <code>git fetch</code> + <code>git merge</code></li>
-</ol>
-<h3 id="Recover"><a href="#Recover" class="headerlink" title="Recover"></a>Recover</h3><ol>
-<li><code>git checkout &lt;filename&gt;</code>: if we modify some files and we do not stage it, we can use this command to go back to the file’s previous staging version</li>
-<li><code>git reset HEAD &lt;filename&gt;</code>: unstage the file</li>
-<li><code>git checkout &lt;branch/file/SHA1&gt;</code>: make the working directory is look like what the repsository look like for the given parameter</li>
-<li><code>git checkout --index.html</code>: <code>--</code>means stay in current branch</li>
-<li><code>git ls-files --deleted -z | xargs -0 git rm</code>: remove all deleted files</li>
-<li><code>git reset --hard HEAD</code>: go back to last commit</li>
-<li><code>git reset --hard &lt;SHA1&gt;</code>: go back to specific commit</li>
-<li><code>git add -u</code>: update all your changes</li>
-</ol>
-<h3 id="Amend"><a href="#Amend" class="headerlink" title="Amend"></a>Amend</h3><ol>
-<li><code>git commit --amend</code>: Combine the staged changes with the previous commit and replace the previous commit with the resulting snapshot. Running this when there is nothing staged lets you edit the previous commit’s message without altering its snapshot.</li>
-</ol>
-<h3 id="Diff"><a href="#Diff" class="headerlink" title="Diff"></a>Diff</h3><ol>
-<li><code>git diff &lt;filename&gt;</code>: check the different between staging and working directory</li>
-<li><code>git diff [file_name] --staged</code>: check the different between repository and staging</li>
-<li><code>git diff branch1..branch2</code>: compare the difference between two branches</li>
-</ol>
-<h3 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h3><ol>
-<li><p>first we have serval commits</p>
- <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">e19a59e <span class="keyword">change</span> <span class="number">3</span></div><div class="line"><span class="number">5</span>c02763 <span class="keyword">change</span> <span class="number">2</span></div><div class="line"><span class="number">9</span>cc0c67 <span class="keyword">change</span> <span class="number">1</span></div><div class="line"><span class="number">5</span>f71846 second commit</div><div class="line"><span class="number">8</span>e2e1ee <span class="keyword">change</span> six</div><div class="line">e8b2bfe <span class="keyword">change</span> total five</div><div class="line">dc2da89 <span class="keyword">first</span> commit</div></pre></td></tr></table></figure>
-</li>
-<li><p>we want to merge the last three use command <code>git rebase -i HEAD~3</code></p>
-</li>
-<li><p>A file popup with the content</p>
- <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">pick <span class="number">9</span>cc0c67 <span class="keyword">change</span> <span class="number">1</span></div><div class="line">pick <span class="number">5</span>c02763 <span class="keyword">change</span> <span class="number">2</span></div><div class="line">pick e19a59e <span class="keyword">change</span> <span class="number">3</span></div><div class="line"></div><div class="line"># Rebase <span class="number">5</span>f71846..e19a59e onto <span class="number">5</span>f71846 (<span class="number">3</span> <span class="keyword">command</span>(s))</div><div class="line">#</div><div class="line"># Command<span class="variable">s:</span></div><div class="line"># <span class="keyword">p</span>, pick = use commit</div><div class="line"># r, reword = use commit, but <span class="keyword">edit</span> the commit message</div><div class="line"># <span class="keyword">e</span>, <span class="keyword">edit</span> = use commit, but <span class="keyword">stop</span> <span class="keyword">for</span> amending</div><div class="line"># s, squash = use commit, but meld into <span class="keyword">previous</span> commit</div><div class="line"># <span class="keyword">f</span>, fixup = like <span class="string">"squash"</span>, but discard this commit<span class="string">'s log message</span></div><div class="line"><span class="string"># x, exec = run command (the rest of the line) using shell</span></div><div class="line"><span class="string"># d, drop = remove commit</span></div><div class="line"><span class="string">#</span></div><div class="line"><span class="string"># These lines can be re-ordered; they are executed from top to bottom.</span></div><div class="line"><span class="string">#</span></div><div class="line"><span class="string"># If you remove a line here THAT COMMIT WILL BE LOST.</span></div><div class="line"><span class="string">#</span></div><div class="line"><span class="string"># However, if you remove everything, the rebase will be aborted.</span></div><div class="line"><span class="string">#</span></div><div class="line"><span class="string"># Note that empty commits are commented out</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>we change the commands with direction, so that we can squash all three commits to one and rename the commit</p>
- <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">reword <span class="number">9</span>cc0c67 <span class="keyword">change</span> <span class="number">1</span></div><div class="line">squash <span class="number">5</span>c02763 <span class="keyword">change</span> <span class="number">2</span></div><div class="line">squash e19a59e <span class="keyword">change</span> <span class="number">3</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>Another file popup and we can rename the commit here</p>
-<p> change </p>
- <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">change</span> <span class="number">1</span></div></pre></td></tr></table></figure>
-<p> to</p>
- <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">total <span class="keyword">change</span> three</div></pre></td></tr></table></figure>
-</li>
-<li><p>The confirmation file popup and after we close it, we finish rebasing</p>
- <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="number">38</span>e2f09 total <span class="keyword">change</span> three</div><div class="line"><span class="number">5</span>f71846 second commit</div><div class="line"><span class="number">8</span>e2e1ee <span class="keyword">change</span> six</div><div class="line">e8b2bfe <span class="keyword">change</span> total five</div><div class="line">dc2da89 <span class="keyword">first</span> commit</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="Patch"><a href="#Patch" class="headerlink" title="Patch"></a>Patch</h3><p>The goal of patching is patch serveral commits from one branch and apply the patch to another branch</p>
-<ol>
-<li><p>We first have several commits in master branch</p>
- <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="number">38</span>e2f09 total <span class="keyword">change</span> three</div><div class="line"><span class="number">5</span>f71846 second commit</div><div class="line"><span class="number">8</span>e2e1ee <span class="keyword">change</span> six</div><div class="line">e8b2bfe <span class="keyword">change</span> total five</div><div class="line">dc2da89 <span class="keyword">first</span> commit</div></pre></td></tr></table></figure>
-</li>
-<li><p>Then we create a new branch ‘newbranch’ and make several commits</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b newbranch</div></pre></td></tr></table></figure>
- <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="number">6700</span>a4d <span class="keyword">change</span> <span class="number">3</span></div><div class="line">c345e71 <span class="keyword">change</span> <span class="number">2</span></div><div class="line">fac8e80 <span class="keyword">change</span> <span class="number">1</span></div><div class="line"><span class="number">38</span>e2f09 total <span class="keyword">change</span> three</div><div class="line"><span class="number">5</span>f71846 second commit</div><div class="line"><span class="number">8</span>e2e1ee <span class="keyword">change</span> six</div><div class="line">e8b2bfe <span class="keyword">change</span> total five</div><div class="line">dc2da89 <span class="keyword">first</span> commit</div></pre></td></tr></table></figure>
-</li>
-<li><p>we patch the last three commits with command </p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git format-patch master --stdout &gt; last_three.patch</div></pre></td></tr></table></figure>
-<ul>
-<li>The above command means we patch the result of diff between current branch and master branch and combine all the commits into one patches</li>
-<li>If we only write <code>git format-patch master</code>, we will create three patches</li>
-<li>We can change master with SHA1, so that we can make the patch from any commit</li>
-</ul>
-</li>
-<li><p>Check the content of the patch</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git apply --<span class="built_in">stat</span> last_three.patch</div></pre></td></tr></table></figure>
-<p> If we don’t get any errors, the patch can be applied cleanly. Otherwise we may see what trouble we’ll run into.</p>
-</li>
-<li><p>Checkout to master branch and apply this patch</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git checkout master</div><div class="line">git am --signoff &lt; last_three.patch</div></pre></td></tr></table></figure>
- <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Applyin<span class="variable">g:</span> <span class="keyword">change</span> <span class="number">1</span></div><div class="line">Applyin<span class="variable">g:</span> <span class="keyword">change</span> <span class="number">2</span></div><div class="line">Applyin<span class="variable">g:</span> <span class="keyword">change</span> <span class="number">3</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="Common-commands"><a href="#Common-commands" class="headerlink" title="Common commands"></a>Common commands</h3><ol>
-<li><strong>Log</strong><ul>
-<li><code>git log</code></li>
-<li><code>git log --oneline</code></li>
-<li><code>git log --graph</code></li>
-</ul>
-</li>
-<li><strong>status</strong><ul>
-<li><code>git status</code> </li>
-</ul>
-</li>
-</ol>
-<h2 id="Accidentally-commit-a-file-taht-should-be-ignored"><a href="#Accidentally-commit-a-file-taht-should-be-ignored" class="headerlink" title="Accidentally commit a file taht should be ignored"></a>Accidentally commit a file taht should be ignored</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git rm --cached /path/to/file</div><div class="line">git commit --amend</div></pre></td></tr></table></figure>
-<p>Then change the name of the commit</p>
-<h2 id="How-to-track-a-remote-branch-to-local-branch"><a href="#How-to-track-a-remote-branch-to-local-branch" class="headerlink" title="How to track a remote branch to local branch"></a>How to track a remote branch to local branch</h2><h2 id="How-to-solve-fatal-refusing-to-merge-unrelated-histories"><a href="#How-to-solve-fatal-refusing-to-merge-unrelated-histories" class="headerlink" title="How to solve fatal: refusing to merge unrelated histories"></a>How to solve <code>fatal: refusing to merge unrelated histories</code></h2>
-          
+<li><strong>build a remote repository</strong>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/09/github-cli/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1347,7 +1060,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1359,10 +1072,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">tags</span>
-              
+              </a>
             </div>
           
 
