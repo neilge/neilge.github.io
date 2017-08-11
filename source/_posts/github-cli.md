@@ -1,15 +1,16 @@
 ---
-title: Github CLI
+title: Git Cheatsheet
 date: 2017-08-09 18:22:30
-tags: Github
+tags: [Git]
 ---
 
-### Terminology
+## Terminology
+
 1. working directory
 2. staging environment
 3. repository
 
-### Create a git local repository and track to a remote repository
+## Create a git local repository and track to a remote repository
 
 1. **create a local repository**
 	- go to the folder that contain the files that we want to add to repository
@@ -28,7 +29,7 @@ tags: Github
 	- after tracking the local repository to the remote one, we can just use `git push` to push the commit to the remote
 
 
-### Clone a project from github and sync the branches
+## Clone a project from github and sync the branches
 
 1. **clone the project from remote**
 	- `git clone <url>`: to clone the remote repository to local the default setting is only cloning the `master` branch
@@ -44,14 +45,15 @@ tags: Github
 3. **only clone one specific branch**
 	- `git clone -b <branch_name> <url>`
 
-### Fetch, merge and pull
+## Fetch, merge and pull
+
 1. `git fetch <alias>`: fetch from remote
 2. `git merge <other branch>`: merge other branch to the current branch, the `other branch` can be a remote branch
 	- how to solve the conflict:
 		//TODO:
 3. `git pull`: `git fetch` + `git merge`
 
-### Recover
+## Recover
 1. `git checkout <filename>`: if we modify some files and we do not stage it, we can use this command to go back to the file's previous staging version
 2. `git reset HEAD <filename>`: unstage the file
 3. `git checkout <branch/file/SHA1>`: make the working directory is look like what the repsository look like for the given parameter
@@ -61,15 +63,15 @@ tags: Github
 7. `git reset --hard <SHA1>`: go back to specific commit
 8. `git add -u`: update all your changes
 
-### Amend
+## Amend
 1. `git commit --amend`: Combine the staged changes with the previous commit and replace the previous commit with the resulting snapshot. Running this when there is nothing staged lets you edit the previous commit’s message without altering its snapshot.
 
-### Diff
+## Diff
 1. `git diff <filename>`: check the different between staging and working directory
 2. `git diff [file_name] --staged`: check the different between repository and staging
 3. `git diff branch1..branch2`: compare the difference between two branches
 
-### Rebase
+## Rebase
 1. first we have serval commits
 
 	```vim
@@ -138,7 +140,7 @@ tags: Github
 	```
 
 
-### Patch
+## Patch
 The goal of patching is patch serveral commits from one branch and apply the patch to another branch
 
 1. We first have several commits in master branch
@@ -195,25 +197,53 @@ The goal of patching is patch serveral commits from one branch and apply the pat
 
 
 
-### Common commands
+## Log and Status
 
 1. **Log**
-	- `git log`
-	- `git log --oneline`
-	- `git log --graph`
+	
+	```bash
+	git log
+	git log --oneline
+	git log --graph
+	```
+
 2. **status**
-	- `git status`
+	
+	```bash
+	git status
+	```
 
 
-## Accidentally commit a file taht should be ignored
+## Ignore changes to committed files
+
+### Temporarily ignore changes
+During development it's convenient to stop tracking file changes to a file committed into your git repo. This is very convenient when customizing settings or configuration files that are part of your project source for your own work environment.
 
 ```bash
-git rm --cached /path/to/file
-git commit --amend
+> git update-index --assume-unchanged <file>
 ```
 
-Then change the name of the commit
+Resume tracking files with:
 
+```bash
+> git update-index --no-assume-unchanged <file>
+```
+
+### Permanently ignore changes to a file
+If a file is already tracked by Git, adding that file to your .gitignore is not enough to ignore changes to the file. You also need to remove the information about the file from Git's index:
+
+> These steps will not delete the file from your system. They just tell Git to ignore future updates to the file.
+
+1. Add the file in your .gitignore.
+2. Run the following:
+	
+	```bash
+	> git rm --cached <file>
+	```
+	
+3. Commit the removal of the file and the updated .gitignore to your repo.
+
+This will be helpful when we **accidentally commit a file taht should be ignored**
 
 ## How to track a remote branch to local branch
 
