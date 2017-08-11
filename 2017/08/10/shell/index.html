@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Cli,Shell,Zsh,Bash," />
 
 
 
@@ -94,13 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Neil&#39;s Blog">
-<meta property="og:url" content="http://neilge.github.io/tags/Sass/index.html">
+<meta name="description" content="I have been using shell for quite a while, but sometimes I still need to search on google to find some very basic settings for shell, like adding a application to environment varibale. It is quite tim">
+<meta name="keywords" content="Cli,Shell,Zsh,Bash">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shell">
+<meta property="og:url" content="http://neilge.github.io/2017/08/10/shell/index.html">
 <meta property="og:site_name" content="Neil&#39;s Blog">
+<meta property="og:description" content="I have been using shell for quite a while, but sometimes I still need to search on google to find some very basic settings for shell, like adding a application to environment varibale. It is quite tim">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-08-11T03:08:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Neil&#39;s Blog">
+<meta name="twitter:title" content="Shell">
+<meta name="twitter:description" content="I have been using shell for quite a while, but sometimes I still need to search on google to find some very basic settings for shell, like adding a application to environment varibale. It is quite tim">
 
 
 
@@ -129,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://neilge.github.io/tags/Sass/"/>
+  <link rel="canonical" href="http://neilge.github.io/2017/08/10/shell/"/>
 
 
 
 
 
-  <title>Tag: Sass | Neil's Blog</title>
+  <title>Shell | Neil's Blog</title>
   
 
 
@@ -154,7 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -272,54 +277,162 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Sass<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/10/shell/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/08/10/sass/" itemprop="url">
-              
-                <span itemprop="name">Sass</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Shell</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-10T00:12:00-04:00"
-              content="2017-08-10" >
-          08-10
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-10T20:42:46-04:00">
+                2017-08-10
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <p>I have been using shell for quite a while, but sometimes I still need to search on google to find some very basic settings for shell, like adding a application to environment varibale. It is quite time consuming and unefficient. Therefore, I decided to make a cheatsheet to move these fragment knowledge into one place,  so that I can easily find them in the future.</p>
+<h1 id="Cli-For-Shell"><a href="#Cli-For-Shell" class="headerlink" title="Cli For Shell"></a>Cli For Shell</h1><h2 id="Get-current-shell"><a href="#Get-current-shell" class="headerlink" title="Get current shell"></a>Get current shell</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> <span class="variable">$SHELL</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Change-default-shell"><a href="#Change-default-shell" class="headerlink" title="Change default shell"></a>Change default shell</h2><h3 id="List-all-installed-shell"><a href="#List-all-installed-shell" class="headerlink" title="List all installed shell"></a>List all installed shell</h3><p>e<br><code>chsh -l</code> does not work for me, so I choose another way:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/shells</div></pre></td></tr></table></figure>
+<h3 id="Change-the-default-shell"><a href="#Change-the-default-shell" class="headerlink" title="Change the default shell"></a>Change the default shell</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">chsh /full/path/to/shell</div><div class="line"></div><div class="line">chsh /bin/zsh</div></pre></td></tr></table></figure>
+<h1 id="Config-Shell"><a href="#Config-Shell" class="headerlink" title="Config Shell"></a>Config Shell</h1><h2 id="Start-files"><a href="#Start-files" class="headerlink" title="Start files"></a>Start files</h2><h3 id="Set-environment-variables"><a href="#Set-environment-variables" class="headerlink" title="Set environment variables"></a>Set environment variables</h3><h2 id="History-search"><a href="#History-search" class="headerlink" title="History search"></a>History search</h2>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Cli/" rel="tag"># Cli</a>
+          
+            <a href="/tags/Shell/" rel="tag"># Shell</a>
+          
+            <a href="/tags/Zsh/" rel="tag"># Zsh</a>
+          
+            <a href="/tags/Bash/" rel="tag"># Bash</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/10/linux-cli-cheatsheet/" rel="next" title="Linux Cli Cheatsheet">
+                <i class="fa fa-chevron-left"></i> Linux Cli Cheatsheet
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/10/english/" rel="prev" title="English">
+                English <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -327,6 +440,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -347,8 +464,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -401,6 +527,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Cli-For-Shell"><span class="nav-number">1.</span> <span class="nav-text">Cli For Shell</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Get-current-shell"><span class="nav-number">1.1.</span> <span class="nav-text">Get current shell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-default-shell"><span class="nav-number">1.2.</span> <span class="nav-text">Change default shell</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#List-all-installed-shell"><span class="nav-number">1.2.1.</span> <span class="nav-text">List all installed shell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Change-the-default-shell"><span class="nav-number">1.2.2.</span> <span class="nav-text">Change the default shell</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Config-Shell"><span class="nav-number">2.</span> <span class="nav-text">Config Shell</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Start-files"><span class="nav-number">2.1.</span> <span class="nav-text">Start files</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-environment-variables"><span class="nav-number">2.1.1.</span> <span class="nav-text">Set environment variables</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#History-search"><span class="nav-number">2.2.</span> <span class="nav-text">History search</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -520,10 +662,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 

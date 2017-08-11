@@ -97,14 +97,14 @@
 <meta name="description" content="How to convert a LocalDateTime to Date1Date date = Date.from(localDateTime.atOffset(ZoneOffset.UTC).toInstant()); Parse a String to Date Parse by DateFormat - SimpleDateFormat  When we use public Date">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java `Date` and `Calendar`">
+<meta property="og:title" content="Java &lt;b&gt;Date&lt;&#x2F;b&gt; and &lt;b&gt;Calendar&lt;&#x2F;b&gt;">
 <meta property="og:url" content="http://neilge.github.io/2017/08/10/java-date-n-calendar/index.html">
 <meta property="og:site_name" content="Neil&#39;s Blog">
 <meta property="og:description" content="How to convert a LocalDateTime to Date1Date date = Date.from(localDateTime.atOffset(ZoneOffset.UTC).toInstant()); Parse a String to Date Parse by DateFormat - SimpleDateFormat  When we use public Date">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-11T00:00:56.000Z">
+<meta property="og:updated_time" content="2017-08-11T03:07:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java `Date` and `Calendar`">
+<meta name="twitter:title" content="Java &lt;b&gt;Date&lt;&#x2F;b&gt; and &lt;b&gt;Calendar&lt;&#x2F;b&gt;">
 <meta name="twitter:description" content="How to convert a LocalDateTime to Date1Date date = Date.from(localDateTime.atOffset(ZoneOffset.UTC).toInstant()); Parse a String to Date Parse by DateFormat - SimpleDateFormat  When we use public Date">
 
 
@@ -140,7 +140,7 @@
 
 
 
-  <title>Java `Date` and `Calendar` | Neil's Blog</title>
+  <title>Java <b>Date</b> and <b>Calendar</b> | Neil's Blog</title>
   
 
 
@@ -308,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java `Date` and `Calendar`</h1>
+          <h1 class="post-title" itemprop="name headline">Java <b>Date</b> and <b>Calendar</b></h1>
         
 
         <div class="post-meta">
@@ -366,9 +366,8 @@
 </li>
 </ol>
 <ol>
-<li><p>Pattern of formatter</p>
-<p> The default format pattern of SimpleDateFormat is <strong>“M/d/yy h:mm a”</strong>, while the default pattern of Date.toString() is <strong>“EEE MMM dd HH:mm:ss zzz yyyy”</strong>. To parse the Date correctly we need to construct the StringDateFormat with <code>SimpleDateFormat formatter = new SimpleDateFormat(&quot;EEE MMM dd HH:mm:ss zzz yyyy&quot;);</code></p>
-</li>
+<li>Pattern of formatter<a id="more"></a>
+ The default format pattern of SimpleDateFormat is <strong>“M/d/yy h:mm a”</strong>, while the default pattern of Date.toString() is <strong>“EEE MMM dd HH:mm:ss zzz yyyy”</strong>. To parse the Date correctly we need to construct the StringDateFormat with <code>SimpleDateFormat formatter = new SimpleDateFormat(&quot;EEE MMM dd HH:mm:ss zzz yyyy&quot;);</code></li>
 </ol>
 <h2 id="Parse-a-String-to-LocalDateTime"><a href="#Parse-a-String-to-LocalDateTime" class="headerlink" title="Parse a String to LocalDateTime"></a>Parse a String to <code>LocalDateTime</code></h2><p>We can use static method <code>parse</code> in <code>LocalDateTime.parse</code> to parse the string<br>LocalDateTime localDateTime = LocalDateTime.parse(dateString); The input String format should be </p>
 <ul>
@@ -417,6 +416,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/10/linux-cli-cheatsheet/" rel="prev" title="Linux Cli Cheatsheet">
+                Linux Cli Cheatsheet <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -493,7 +496,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -506,7 +509,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

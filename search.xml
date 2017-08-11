@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Java `Date` and `Calendar`]]></title>
+    <title><![CDATA[08/10/17]]></title>
+    <url>%2F2017%2F08%2F10%2F08-10-17%2F</url>
+    <content type="text"><![CDATA[The good news is I finished setting up my personal tech blog using github.io and hexo. Finally, I have a safe place to put my knowledge and my experience in and the most awesome place is I can share my idea with others through this place. Hexo is awesome. I do not need to buy any server on cloud to deploy my code or buy database to store my data. Hexo helps me to avoid all these annoy things just by some simple cli and a github.io. Hexo also has varied themes and I choose the top1 pop theme called next. It is really elegant but powerful. I can change the highlight style of the code, add tagscloud and add a search function into it.But this is the end of good things. I have more troubles need to worry about. My time is limit but my tasks are accumulating and I did not find a sign that my work efficiency is improving. In fact, my issues can be concluded into two categories. One is communication problem, the other is skill problem. Communication is tough in a English speaking environment. I expected it would be hard, but I never thought it would be like this way. My listening becomes the most serious problem, because in many cases, I cannot understand what others are talking about and I need to guess what do they mean. The atomersphere of conversation become awkard just because I cannot understand what others are talking about and cannot get involved into the conversation. I hope my listening could be better by watching the TV shows and listening to Audible. But until now, the effect might not seems like much. I need to find a more efficient way to improve my speaking and listening. The other thing is my work efficiency is not as I expected. Not only because I spent too much time on setting up AUIserver, but I always feel tired when I just worked for a short of time. I think need more physical practice and get used to work in a long time. The other thing I can do is to remember some details in work or life intentionally. I am always tired of remember things, because I thought if it is important, it will repeat many times in the future and at that time, I must remember these things. However, if I do not remember them once on purpose, I will not remember it at next time I come cross it. I need to start remember something now and it is a good time, because I have already know which things are important enough for me to remember and which are not. This is enough for today. The next thing that I want to do is search some good methods to pick up listening and speaking for a foreign speaker.]]></content>
+      <tags>
+        <tag>Diary</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[English]]></title>
+    <url>%2F2017%2F08%2F10%2Fenglish%2F</url>
+    <content type="text"><![CDATA[Word inkling: a slight knowledge or suspicion; a hint. suspicion: a feeling or thought that something is possible, likely, or true. incorporate: take in or contain (something) as part of a whole; include. aside: a remark that is not directly related to the main topic of discussion. deliberate: done consciously and intentionally. provoke: stimulate or give rise to (a reaction or emotion, typically a strong or unwelcome one) in someone. tilde: ~ Phrase What is meant by sth?? Other useful link Name of punctuation mark]]></content>
+      <tags>
+        <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Shell]]></title>
+    <url>%2F2017%2F08%2F10%2Fshell%2F</url>
+    <content type="text"><![CDATA[I have been using shell for quite a while, but sometimes I still need to search on google to find some very basic settings for shell, like adding a application to environment varibale. It is quite time consuming and unefficient. Therefore, I decided to make a cheatsheet to move these fragment knowledge into one place, so that I can easily find them in the future. Cli For ShellGet current shell1$ echo $SHELL Change default shellList all installed shellechsh -l does not work for me, so I choose another way: 1cat /etc/shells Change the default shell123chsh /full/path/to/shellchsh /bin/zsh Config ShellStart filesSet environment variablesHistory search]]></content>
+      <tags>
+        <tag>Cli</tag>
+        <tag>Shell</tag>
+        <tag>Zsh</tag>
+        <tag>Bash</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux Cli Cheatsheet]]></title>
+    <url>%2F2017%2F08%2F10%2Flinux-cli-cheatsheet%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Cli</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Java Date and Calendar]]></title>
     <url>%2F2017%2F08%2F10%2Fjava-date-n-calendar%2F</url>
     <content type="text"><![CDATA[How to convert a LocalDateTime to Date1Date date = Date.from(localDateTime.atOffset(ZoneOffset.UTC).toInstant()); Parse a String to Date Parse by DateFormat - SimpleDateFormat When we use public Date parse(String source), if the begining of the parameter cannot be parsed, it will throw a ParseException, otherwise return a Date If we choose public abstract Date parse(String source, ParsePosition pos), it will return null when the string cannot be parsed without throw Exception. Pattern of formatter The default format pattern of SimpleDateFormat is “M/d/yy h:mm a”, while the default pattern of Date.toString() is “EEE MMM dd HH:mm:ss zzz yyyy”. To parse the Date correctly we need to construct the StringDateFormat with SimpleDateFormat formatter = new SimpleDateFormat(&quot;EEE MMM dd HH:mm:ss zzz yyyy&quot;); Parse a String to LocalDateTimeWe can use static method parse in LocalDateTime.parse to parse the stringLocalDateTime localDateTime = LocalDateTime.parse(dateString); The input String format should be uuuu-MM-dd’T’HH:mm uuuu-MM-dd’T’HH:mm:ss uuuu-MM-dd’T’HH:mm:ss.SSS uuuu-MM-dd’T’HH:mm:ss.SSSSSS uuuu-MM-dd’T’HH:mm:ss.SSSSSSSSS]]></content>
       <tags>
