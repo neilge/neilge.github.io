@@ -1,5 +1,5 @@
 ---
-title: Java `Date` and `Calendar`
+title: Java <b>Date</b> and <b>Calendar</b>
 date: 2017-08-10 13:11:28
 tags: Java
 ---
@@ -20,7 +20,7 @@ Date date = Date.from(localDateTime.atOffset(ZoneOffset.UTC).toInstant());
 	
 
 2. Pattern of formatter
-
+<!-- more -->
 	The default format pattern of SimpleDateFormat is **"M/d/yy h:mm a"**, while the default pattern of Date.toString() is **"EEE MMM dd HH:mm:ss zzz yyyy"**. To parse the Date correctly we need to construct the StringDateFormat with `SimpleDateFormat formatter = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy");`
 	
 ## Parse a String to `LocalDateTime`
