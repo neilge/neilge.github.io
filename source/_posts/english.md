@@ -4,16 +4,22 @@ date: 2017-08-10 21:15:34
 tags: English
 ---
 
+This is a summary of the words and phrases that I come cross in the daily life, especially in TV series and books. 
+
+
 # Word
+
 
 1. **inkling**: a slight knowledge or suspicion; a hint.
 2. **suspicion**: a feeling or thought that something is possible, likely, or true.
 3. **incorporate**: take in or contain (something) as part of a whole; include.
 4. **aside**: a remark that is not directly related to the main topic of discussion.
 5. **deliberate**: done consciously and intentionally.
+
+<!-- more -->
+
 6. **provoke**: stimulate or give rise to (a reaction or emotion, typically a strong or unwelcome one) in someone.
 7. **tilde**: ~
-<!-- more -->
 8. **compliment**: a polite expression of praise or admiration.
 9. **benchmark**: a standard or point of reference against which things may be compared or assessed.
 10. **tension**: the state of being stretched tight.

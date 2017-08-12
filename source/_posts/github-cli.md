@@ -19,6 +19,7 @@ tags: [Git]
 	- `git add <filename>` or `git add .`: add a file or add all files to the staging environment
 	- `git commit -m "<commit message>"`: commit the files into local repository
 2. **build a remote repository**
+
 <!-- more -->
 	- sign in the github account
 	- click **+ New repository** button
