@@ -63,6 +63,7 @@ tags: [Git]
 6. `git reset --hard HEAD`: go back to last commit
 7. `git reset --hard <SHA1>`: go back to specific commit
 8. `git add -u`: update all your changes
+9. `git reset HEAD~`: undo the last commit
 
 ## Amend
 1. `git commit --amend`: Combine the staged changes with the previous commit and replace the previous commit with the resulting snapshot. Running this when there is nothing staged lets you edit the previous commit’s message without altering its snapshot.
@@ -214,6 +215,34 @@ The goal of patching is patch serveral commits from one branch and apply the pat
 	git status
 	```
 
+### Get status on all repos in folder
+
+```bash
+find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status -s && echo)' \;
+```
+
+From the containing folder, execute this command and it will list the status of each repo in that folder.
+
+How it works:
+
+* find . : to find everything in the current folder
+* -maxdepth 1 : so that it doesn't recurse into subdirs of the repos
+* -mindepth 1 : so that it skips the current directory (of depth 0)
+* -type d : only find directories
+* -exec sh -c : spawn a shell and give it a command
+* '(echo {} && cd {} && git status && echo)' : the command given to the shell
+* echo {} : echo the directory found by find
+* cd {} : cd into the directory found by find
+* git status -s : run the actual git status, with the -s (short) option
+* echo : echo an empty line, for readability
+* \; : semicolon to run shell for each of the found directories instead of passing them all to one shell as arguments
+
+Set this command as alias in `.zprofile`
+
+```vim
+alias stall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status -s && echo)' \;"
+```
+
 
 ## Ignore changes to committed files
 
@@ -245,6 +274,8 @@ If a file is already tracked by Git, adding that file to your .gitignore is not 
 3. Commit the removal of the file and the updated .gitignore to your repo.
 
 This will be helpful when we **accidentally commit a file taht should be ignored**
+
+
 
 ## How to track a remote branch to local branch
 
