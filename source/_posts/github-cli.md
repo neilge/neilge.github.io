@@ -54,6 +54,8 @@ tags: [Git]
 		//TODO:
 3. `git pull`: `git fetch` + `git merge`
 
+## Stash
+
 ## Recover
 1. `git checkout <filename>`: if we modify some files and we do not stage it, we can use this command to go back to the file's previous staging version
 2. `git reset HEAD <filename>`: unstage the file
@@ -262,13 +264,13 @@ alias stall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd 
 During development it's convenient to stop tracking file changes to a file committed into your git repo. This is very convenient when customizing settings or configuration files that are part of your project source for your own work environment.
 
 ```bash
-> git update-index --assume-unchanged <file>
+git update-index --assume-unchanged <file>
 ```
 
 Resume tracking files with:
 
 ```bash
-> git update-index --no-assume-unchanged <file>
+git update-index --no-assume-unchanged <file>
 ```
 
 ### Permanently ignore changes to a file
@@ -280,7 +282,7 @@ If a file is already tracked by Git, adding that file to your .gitignore is not 
 2. Run the following:
 	
 	```bash
-	> git rm --cached <file>
+	git rm --cached <file>
 	```
 	
 3. Commit the removal of the file and the updated .gitignore to your repo.
@@ -290,5 +292,12 @@ This will be helpful when we **accidentally commit a file taht should be ignored
 
 
 ## How to track a remote branch to local branch
+
+```bash
+git fetch
+git branch --track branch-name origin/branch-name
+```
+
+Try not to create a local branch first because it will cause a conflict
 
 ## How to solve `fatal: refusing to merge unrelated histories`
