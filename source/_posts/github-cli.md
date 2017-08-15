@@ -74,6 +74,17 @@ tags: [Git]
 3. `git diff branch1..branch2`: compare the difference between two branches
 
 ## Rebase
+
+1. put my commit on the top of all commits
+
+	```bash
+	# make sure the repo is the updated one
+	git pull
+	
+	# put my commit on top of the others
+	git rebase
+	```
+
 1. first we have serval commits
 
 	```vim
