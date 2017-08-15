@@ -64,6 +64,7 @@ tags: [Git]
 7. `git reset --hard <SHA1>`: go back to specific commit
 8. `git add -u`: update all your changes
 9. `git reset HEAD~`: undo the last commit
+10. `git clean [-f]`: remove files that are not tracked, The -f (force) option will also remove files, that are not tracked and are also being ignored by git though ignore-rule.
 
 ## Amend
 1. `git commit --amend`: Combine the staged changes with the previous commit and replace the previous commit with the resulting snapshot. Running this when there is nothing staged lets you edit the previous commit’s message without altering its snapshot.
@@ -74,6 +75,17 @@ tags: [Git]
 3. `git diff branch1..branch2`: compare the difference between two branches
 
 ## Rebase
+
+1. put my commit on the top of all commits
+
+	```bash
+	# make sure the repo is the updated one
+	git pull
+	
+	# put my commit on top of the others
+	git rebase
+	```
+
 1. first we have serval commits
 
 	```vim
