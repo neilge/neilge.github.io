@@ -121,4 +121,10 @@ to us
 
 ## Set up alias
 
+```bash
+alias tailmyless='cd /home/myuser/public_html/less && lessc -c style.less > ../style.css && cd ../ && tail style.css'
+```
+
+We can run this command directly in the shell or write it into zsh source file to make it accessible globally.
+
 ## History search
