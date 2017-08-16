@@ -47,6 +47,8 @@ chsh /bin/zsh
 
 ## Start files
 
+When starting Zsh, it will source the following files in this order by default:
+
 * `/etc/zsh/zshenv`: Used for setting system-wide environment variables; it should not contain commands that produce output or assume the shell is attached to a tty. This file will ***always*** be sourced, this cannot be overridden.
 * `$ZDOTDIR/.zshenv`: Used for setting user's environment variables; it should not contain commands that produce output or assume the shell is attached to a tty. This file will ***always*** be sourced.
 * `/etc/zsh/zprofile`: Used for executing commands at start, will be sourced when starting as a ***login shell***. Please note that on Arch Linux, by default it contains one line which source the `/etc/profile`
@@ -116,5 +118,7 @@ ls is an alias for ls -G
 ```
 
 to us
+
+## Set up alias
 
 ## History search
