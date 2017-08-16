@@ -19,8 +19,6 @@ tags: [Git]
 	- `git add <filename>` or `git add .`: add a file or add all files to the staging environment
 	- `git commit -m "<commit message>"`: commit the files into local repository
 2. **build a remote repository**
-
-<!-- more -->
 	- sign in the github account
 	- click **+ New repository** button
 	- and create a repository as instruction
@@ -29,6 +27,7 @@ tags: [Git]
 	- `git push -u <alias> <branch>`: push the content in the local repository to the remote, here, `<alias>` is always set as `origin` and `<branch>` is the branch that we want to push e.g. `master`
 	- after tracking the local repository to the remote one, we can just use `git push` to push the commit to the remote
 
+<!-- more -->
 
 ## Clone a project from github and sync the branches
 
