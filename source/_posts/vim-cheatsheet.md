@@ -28,6 +28,7 @@ Please refer to this article if you want to get more details: [Vim Cheat Sheet](
 * `u`: undo
 * `Ctrl + r`: redo
 
+
 # Settings
 
 ## Make vi editor display line number
