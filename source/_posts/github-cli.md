@@ -55,6 +55,12 @@ tags: [Git]
 
 ## Stash
 
+Please refer: [Git stash](https://www.atlassian.com/git/tutorials/git-stash)
+
+1. `git stash`: stash (1) changes that have been added to your index (staged changes), (2) changes made to files that are currently tracked by Git (unstaged changes)
+2. `git stash -u`: also stash untracked files
+3. `git stash pop`: popping your stash removes the changes from your stash and reapplies them to your working copy.
+
 ## Recover
 1. `git checkout <filename>`: if we modify some files and we do not stage it, we can use this command to go back to the file's previous staging version
 2. `git reset HEAD <filename>`: unstage the file
