@@ -72,6 +72,7 @@ Please refer: [Git stash](https://www.atlassian.com/git/tutorials/git-stash)
 8. `git add -u`: update all your changes
 9. `git reset HEAD~`: undo the last commit
 10. `git clean [-f]`: remove files that are not tracked, The -f (force) option will also remove files, that are not tracked and are also being ignored by git though ignore-rule.
+11. `find . -name '*Email*' -exec git checkout {} \;`: checkout all the files that contains **Email** in its pathname in the current folder and its subfolder.
 
 ## Amend
 1. `git commit --amend`: Combine the staged changes with the previous commit and replace the previous commit with the resulting snapshot. Running this when there is nothing staged lets you edit the previous commit’s message without altering its snapshot.
