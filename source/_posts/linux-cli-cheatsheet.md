@@ -184,22 +184,26 @@ rsync -avz rpmpkgs/ root@192.168.0.101:/home/
 rsync -avzh root@192.168.0.100:/home/tarunika/rpmpkgs /tmp/myrpms
 ```
 
+# Function
+
+The function format is quite simple, but one thing need to be remembered. The args of function is "$@". This is all of the args and if you want to get each arg, you can get them by index but the this index starts from 1 but not 0.
+
+Sync from remote
 
 ```bash
-
+syncFromRemote () {
+    rsync -avzh root@192.168.0.100:"$@" ~/reports/
+}
 ```
-
-
-```bash
-
-```
-
+Compare two number
 
 ```bash
-
-```
-
-
-```bash
-
+compare () {
+	if [ "$@[1]" -gt "$@[2]" ]
+	then
+		echo "larger"
+	else
+		echo "smaller"
+	fi
+}
 ```
