@@ -15,6 +15,7 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 3. **incorporate**: take in or contain (something) as part of a whole; include.
 4. **aside**: a remark that is not directly related to the main topic of discussion.
 5. **deliberate**: done consciously and intentionally.
+6. **caveat**: a warning or proviso of specific stipulation, condition or limitation
 
 <!-- more -->
 
@@ -33,6 +34,7 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 
 1. **What is meant by sth??**
 2. **get traction**: gain public recognition or acceptance
+3. **think of ... as**
 
 
 
