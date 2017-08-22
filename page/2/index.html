@@ -288,6 +288,132 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/10/react-n-redux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/10/react-n-redux/" itemprop="url">React and Redux</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-10T00:08:11-04:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Origin Resourse from <a href="http://www.thegreatcodeadventure.com/building-a-simple-crud-app-with-react-redux-part-1/" target="_blank" rel="external">Building a Simple CRUD App with React + Redux</a></p>
+<h2 id="The-advantage-of-React"><a href="#The-advantage-of-React" class="headerlink" title="The advantage of React"></a>The advantage of React</h2><p>React is fast. It uses the virtual DOM to track the state of the actual DOM, only re-rendering discrete sections of the DOM as changes to application state dictate.</p>
+<p>But where I really started to see the advantages of React was in the flow of data through the application, in the purely Data Down Actions Up system of maintaining application state.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/react-n-redux/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/10/mongodb-cli/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -503,7 +629,18 @@
 <li><code>git commit -m &quot;&lt;commit message&gt;&quot;</code>: commit the files into local repository</li>
 </ul>
 </li>
-<li><strong>build a remote repository</strong></li>
+<li><strong>build a remote repository</strong><ul>
+<li>sign in the github account</li>
+<li>click <strong>+ New repository</strong> button</li>
+<li>and create a repository as instruction</li>
+</ul>
+</li>
+<li><strong>track the local repository to remote</strong><ul>
+<li><code>git remote add &lt;alias&gt; &lt;url&gt;</code>: add a remote, <code>&lt;alias&gt;</code> is always set as <code>origin</code> and <code>&lt;url&gt;</code> is the http url copied from github</li>
+<li><code>git push -u &lt;alias&gt; &lt;branch&gt;</code>: push the content in the local repository to the remote, here, <code>&lt;alias&gt;</code> is always set as <code>origin</code> and <code>&lt;branch&gt;</code> is the branch that we want to push e.g. <code>master</code></li>
+<li>after tracking the local repository to the remote one, we can just use <code>git push</code> to push the commit to the remote</li>
+</ul>
+</li>
 </ol>
           <!--noindex-->
           <div class="post-button text-center">
@@ -595,7 +732,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -608,7 +745,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

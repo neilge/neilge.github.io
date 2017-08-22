@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Neil&#39;s Blog">
 <meta property="og:description" content="Terminology working directory staging environment repository  Create a git local repository and track to a remote repository create a local repository go to the folder that contain the files that we w">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-16T03:01:14.000Z">
+<meta property="og:updated_time" content="2017-08-19T00:19:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Cheatsheet">
 <meta name="twitter:description" content="Terminology working directory staging environment repository  Create a git local repository and track to a remote repository create a local repository go to the folder that contain the files that we w">
@@ -372,13 +372,12 @@
 <li><code>git commit -m &quot;&lt;commit message&gt;&quot;</code>: commit the files into local repository</li>
 </ul>
 </li>
-<li><strong>build a remote repository</strong></li>
-</ol>
-<a id="more"></a>
-<pre><code>- sign in the github account
-- click **+ New repository** button
-- and create a repository as instruction
-</code></pre><ol>
+<li><strong>build a remote repository</strong><ul>
+<li>sign in the github account</li>
+<li>click <strong>+ New repository</strong> button</li>
+<li>and create a repository as instruction</li>
+</ul>
+</li>
 <li><strong>track the local repository to remote</strong><ul>
 <li><code>git remote add &lt;alias&gt; &lt;url&gt;</code>: add a remote, <code>&lt;alias&gt;</code> is always set as <code>origin</code> and <code>&lt;url&gt;</code> is the http url copied from github</li>
 <li><code>git push -u &lt;alias&gt; &lt;branch&gt;</code>: push the content in the local repository to the remote, here, <code>&lt;alias&gt;</code> is always set as <code>origin</code> and <code>&lt;branch&gt;</code> is the branch that we want to push e.g. <code>master</code></li>
@@ -386,6 +385,7 @@
 </ul>
 </li>
 </ol>
+<a id="more"></a>
 <h2 id="Clone-a-project-from-github-and-sync-the-branches"><a href="#Clone-a-project-from-github-and-sync-the-branches" class="headerlink" title="Clone a project from github and sync the branches"></a>Clone a project from github and sync the branches</h2><ol>
 <li><strong>clone the project from remote</strong><ul>
 <li><code>git clone &lt;url&gt;</code>: to clone the remote repository to local the default setting is only cloning the <code>master</code> branch</li>
@@ -413,6 +413,12 @@
 </li>
 <li><code>git pull</code>: <code>git fetch</code> + <code>git merge</code></li>
 </ol>
+<h2 id="Stash"><a href="#Stash" class="headerlink" title="Stash"></a>Stash</h2><p>Please refer: <a href="https://www.atlassian.com/git/tutorials/git-stash" target="_blank" rel="external">Git stash</a></p>
+<ol>
+<li><code>git stash</code>: stash (1) changes that have been added to your index (staged changes), (2) changes made to files that are currently tracked by Git (unstaged changes)</li>
+<li><code>git stash -u</code>: also stash untracked files</li>
+<li><code>git stash pop</code>: popping your stash removes the changes from your stash and reapplies them to your working copy.</li>
+</ol>
 <h2 id="Recover"><a href="#Recover" class="headerlink" title="Recover"></a>Recover</h2><ol>
 <li><code>git checkout &lt;filename&gt;</code>: if we modify some files and we do not stage it, we can use this command to go back to the file’s previous staging version</li>
 <li><code>git reset HEAD &lt;filename&gt;</code>: unstage the file</li>
@@ -424,6 +430,7 @@
 <li><code>git add -u</code>: update all your changes</li>
 <li><code>git reset HEAD~</code>: undo the last commit</li>
 <li><code>git clean [-f]</code>: remove files that are not tracked, The -f (force) option will also remove files, that are not tracked and are also being ignored by git though ignore-rule.</li>
+<li><code>find . -name &#39;*Email*&#39; -exec git checkout {} \;</code>: checkout all the files that contains <strong>Email</strong> in its pathname in the current folder and its subfolder.</li>
 </ol>
 <h2 id="Amend"><a href="#Amend" class="headerlink" title="Amend"></a>Amend</h2><ol>
 <li><code>git commit --amend</code>: Combine the staged changes with the previous commit and replace the previous commit with the resulting snapshot. Running this when there is nothing staged lets you edit the previous commit’s message without altering its snapshot.</li>
@@ -511,9 +518,9 @@
 <p>Set this command as alias in <code>.zprofile</code></p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alias stall=<span class="string">"find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo &#123;&#125; &amp;&amp; cd &#123;&#125; &amp;&amp; git status -s &amp;&amp; echo)' \;"</span></div></pre></td></tr></table></figure>
 <h2 id="Ignore-changes-to-committed-files"><a href="#Ignore-changes-to-committed-files" class="headerlink" title="Ignore changes to committed files"></a>Ignore changes to committed files</h2><h3 id="Temporarily-ignore-changes"><a href="#Temporarily-ignore-changes" class="headerlink" title="Temporarily ignore changes"></a>Temporarily ignore changes</h3><p>During development it’s convenient to stop tracking file changes to a file committed into your git repo. This is very convenient when customizing settings or configuration files that are part of your project source for your own work environment.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; git update-index --assume-unchanged &lt;file&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git update-index --assume-unchanged &lt;file&gt;</div></pre></td></tr></table></figure>
 <p>Resume tracking files with:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; git update-index --no-assume-unchanged &lt;file&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git update-index --no-assume-unchanged &lt;file&gt;</div></pre></td></tr></table></figure>
 <h3 id="Permanently-ignore-changes-to-a-file"><a href="#Permanently-ignore-changes-to-a-file" class="headerlink" title="Permanently ignore changes to a file"></a>Permanently ignore changes to a file</h3><p>If a file is already tracked by Git, adding that file to your .gitignore is not enough to ignore changes to the file. You also need to remove the information about the file from Git’s index:</p>
 <blockquote>
 <p>These steps will not delete the file from your system. They just tell Git to ignore future updates to the file.</p>
@@ -521,14 +528,16 @@
 <ol>
 <li>Add the file in your .gitignore.</li>
 <li><p>Run the following:</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; git rm --cached &lt;file&gt;</div></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rm --cached &lt;file&gt;</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <ol>
 <li>Commit the removal of the file and the updated .gitignore to your repo.</li>
 </ol>
 <p>This will be helpful when we <strong>accidentally commit a file taht should be ignored</strong></p>
-<h2 id="How-to-track-a-remote-branch-to-local-branch"><a href="#How-to-track-a-remote-branch-to-local-branch" class="headerlink" title="How to track a remote branch to local branch"></a>How to track a remote branch to local branch</h2><h2 id="How-to-solve-fatal-refusing-to-merge-unrelated-histories"><a href="#How-to-solve-fatal-refusing-to-merge-unrelated-histories" class="headerlink" title="How to solve fatal: refusing to merge unrelated histories"></a>How to solve <code>fatal: refusing to merge unrelated histories</code></h2>
+<h2 id="How-to-track-a-remote-branch-to-local-branch"><a href="#How-to-track-a-remote-branch-to-local-branch" class="headerlink" title="How to track a remote branch to local branch"></a>How to track a remote branch to local branch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git fetch</div><div class="line">git branch --track branch-name origin/branch-name</div></pre></td></tr></table></figure>
+<p>Try not to create a local branch first because it will cause a conflict</p>
+<h2 id="How-to-solve-fatal-refusing-to-merge-unrelated-histories"><a href="#How-to-solve-fatal-refusing-to-merge-unrelated-histories" class="headerlink" title="How to solve fatal: refusing to merge unrelated histories"></a>How to solve <code>fatal: refusing to merge unrelated histories</code></h2>
       
     </div>
     
@@ -643,7 +652,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -656,7 +665,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -691,7 +700,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminology"><span class="nav-number">1.</span> <span class="nav-text">Terminology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-a-git-local-repository-and-track-to-a-remote-repository"><span class="nav-number">2.</span> <span class="nav-text">Create a git local repository and track to a remote repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clone-a-project-from-github-and-sync-the-branches"><span class="nav-number">3.</span> <span class="nav-text">Clone a project from github and sync the branches</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fetch-merge-and-pull"><span class="nav-number">4.</span> <span class="nav-text">Fetch, merge and pull</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recover"><span class="nav-number">5.</span> <span class="nav-text">Recover</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Amend"><span class="nav-number">6.</span> <span class="nav-text">Amend</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Diff"><span class="nav-number">7.</span> <span class="nav-text">Diff</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rebase"><span class="nav-number">8.</span> <span class="nav-text">Rebase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Patch"><span class="nav-number">9.</span> <span class="nav-text">Patch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Log-and-Status"><span class="nav-number">10.</span> <span class="nav-text">Log and Status</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Get-status-on-all-repos-in-folder"><span class="nav-number">10.1.</span> <span class="nav-text">Get status on all repos in folder</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ignore-changes-to-committed-files"><span class="nav-number">11.</span> <span class="nav-text">Ignore changes to committed files</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Temporarily-ignore-changes"><span class="nav-number">11.1.</span> <span class="nav-text">Temporarily ignore changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Permanently-ignore-changes-to-a-file"><span class="nav-number">11.2.</span> <span class="nav-text">Permanently ignore changes to a file</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-track-a-remote-branch-to-local-branch"><span class="nav-number">12.</span> <span class="nav-text">How to track a remote branch to local branch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-solve-fatal-refusing-to-merge-unrelated-histories"><span class="nav-number">13.</span> <span class="nav-text">How to solve fatal: refusing to merge unrelated histories</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminology"><span class="nav-number">1.</span> <span class="nav-text">Terminology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-a-git-local-repository-and-track-to-a-remote-repository"><span class="nav-number">2.</span> <span class="nav-text">Create a git local repository and track to a remote repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clone-a-project-from-github-and-sync-the-branches"><span class="nav-number">3.</span> <span class="nav-text">Clone a project from github and sync the branches</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fetch-merge-and-pull"><span class="nav-number">4.</span> <span class="nav-text">Fetch, merge and pull</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stash"><span class="nav-number">5.</span> <span class="nav-text">Stash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recover"><span class="nav-number">6.</span> <span class="nav-text">Recover</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Amend"><span class="nav-number">7.</span> <span class="nav-text">Amend</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Diff"><span class="nav-number">8.</span> <span class="nav-text">Diff</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rebase"><span class="nav-number">9.</span> <span class="nav-text">Rebase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Patch"><span class="nav-number">10.</span> <span class="nav-text">Patch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Log-and-Status"><span class="nav-number">11.</span> <span class="nav-text">Log and Status</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Get-status-on-all-repos-in-folder"><span class="nav-number">11.1.</span> <span class="nav-text">Get status on all repos in folder</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ignore-changes-to-committed-files"><span class="nav-number">12.</span> <span class="nav-text">Ignore changes to committed files</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Temporarily-ignore-changes"><span class="nav-number">12.1.</span> <span class="nav-text">Temporarily ignore changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Permanently-ignore-changes-to-a-file"><span class="nav-number">12.2.</span> <span class="nav-text">Permanently ignore changes to a file</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-track-a-remote-branch-to-local-branch"><span class="nav-number">13.</span> <span class="nav-text">How to track a remote branch to local branch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-solve-fatal-refusing-to-merge-unrelated-histories"><span class="nav-number">14.</span> <span class="nav-text">How to solve fatal: refusing to merge unrelated histories</span></a></li></ol></div>
             
 
           </div>

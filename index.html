@@ -288,6 +288,149 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/16/vim-cheatsheet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/16/vim-cheatsheet/" itemprop="url">Vi Cheatsheet</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-16T13:25:20-04:00">
+                2017-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Please refer to this article if you want to get more details: <a href="https://vim.rtorr.com/" target="_blank" rel="external">Vim Cheat Sheet</a></p>
+<h1 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h1><h2 id="Moving-Cusor"><a href="#Moving-Cusor" class="headerlink" title="Moving Cusor"></a>Moving Cusor</h2><ul>
+<li><code>w</code>: jump forwards to the start of a word</li>
+<li><code>e</code>: jump forwards to the end of a word</li>
+<li><code>b</code>: jump backwards to the start of a word</li>
+<li><code>0</code>: jump to the start of the line</li>
+<li><code>$</code>: jump to the end of the line</li>
+<li><code>gg</code>: go to the first line of the document</li>
+<li><code>G</code>: go to the last line of the document</li>
+<li><code>5G</code>: go to line 5</li>
+<li><code>Ctrl + b</code>: move back one full screen</li>
+<li><code>Ctrl + f</code>: move forward one full screen</li>
+<li><code>Ctrl + d</code>: move forward 1/2 a screen</li>
+<li><code>Ctrl + u</code>: move back 1/2 a screen</li>
+</ul>
+<h2 id="Editing"><a href="#Editing" class="headerlink" title="Editing"></a>Editing</h2><ul>
+<li><code>u</code>: undo</li>
+<li><code>Ctrl + r</code>: redo</li>
+</ul>
+<h1 id="Settings"><a href="#Settings" class="headerlink" title="Settings"></a>Settings</h1><h2 id="Make-vi-editor-display-line-number"><a href="#Make-vi-editor-display-line-number" class="headerlink" title="Make vi editor display line number"></a>Make vi editor display line number</h2><ol>
+<li>Press the <code>Esc</code> key if you are currently in insert or append mode.</li>
+<li>Press <code>:</code> (the colon). The cursor should reappear at the lower left corner of the screen next to a <code>:</code> prompt.</li>
+<li>Enter the following command: <code>set number</code>.</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/12/blockchain/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -617,6 +760,7 @@
 <li><strong>incorporate</strong>: take in or contain (something) as part of a whole; include.</li>
 <li><strong>aside</strong>: a remark that is not directly related to the main topic of discussion.</li>
 <li><strong>deliberate</strong>: done consciously and intentionally.</li>
+<li><strong>caveat</strong>: a warning or proviso of specific stipulation, condition or limitation</li>
 </ol>
           <!--noindex-->
           <div class="post-button text-center">
@@ -910,10 +1054,12 @@
 </ul>
 <h2 id="Copy-a-Directory-from-Local-Server-to-a-Remote-Server"><a href="#Copy-a-Directory-from-Local-Server-to-a-Remote-Server" class="headerlink" title="Copy a Directory from Local Server to a Remote Server"></a>Copy a Directory from Local Server to a Remote Server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rsync -avz rpmpkgs/ root@192.168.0.101:/home/</div></pre></td></tr></table></figure>
 <h2 id="Copy-Sync-a-Remote-Directory-to-a-Local-Machine"><a href="#Copy-Sync-a-Remote-Directory-to-a-Local-Machine" class="headerlink" title="Copy/Sync a Remote Directory to a Local Machine"></a>Copy/Sync a Remote Directory to a Local Machine</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rsync -avzh root@192.168.0.100:/home/tarunika/rpmpkgs /tmp/myrpms</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h1 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h1><p>The function format is quite simple, but one thing need to be remembered. The args of function is “$@”. This is all of the args and if you want to get each arg, you can get them by index but the this index starts from 1 but not 0.</p>
+<p>Sync from remote</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">syncFromRemote</span></span> () &#123;</div><div class="line">    rsync -avzh root@192.168.0.100:<span class="string">"<span class="variable">$@</span>"</span> ~/reports/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Compare two number</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">compare</span></span> () &#123;</div><div class="line">	<span class="keyword">if</span> [ <span class="string">"<span class="variable">$@</span>[1]"</span> -gt <span class="string">"<span class="variable">$@</span>[2]"</span> ]</div><div class="line">	<span class="keyword">then</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"larger"</span></div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"smaller"</span></div><div class="line">	<span class="keyword">fi</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
           
         
       
@@ -1459,132 +1605,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://neilge.github.io/2017/08/10/react-n-redux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Neil">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/10/react-n-redux/" itemprop="url">React and Redux</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-10T00:08:11-04:00">
-                2017-08-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Origin Resourse from <a href="http://www.thegreatcodeadventure.com/building-a-simple-crud-app-with-react-redux-part-1/" target="_blank" rel="external">Building a Simple CRUD App with React + Redux</a></p>
-<h2 id="The-advantage-of-React"><a href="#The-advantage-of-React" class="headerlink" title="The advantage of React"></a>The advantage of React</h2><p>React is fast. It uses the virtual DOM to track the state of the actual DOM, only re-rendering discrete sections of the DOM as changes to application state dictate.</p>
-<p>But where I really started to see the advantages of React was in the flow of data through the application, in the purely Data Down Actions Up system of maintaining application state.<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/10/react-n-redux/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1635,7 +1655,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1648,7 +1668,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
