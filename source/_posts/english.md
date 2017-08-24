@@ -29,12 +29,22 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 13. **jeopardize**: put (someone or something) into a situation in which there is a danger of loss, harm, or failure.
 14. **neologism**: a newly coined word or expression.
 15. **hostile**: unfriendly; antagonistic.
+16. **boilerplate**: refers to sections of code that have to be included in many places with little or no alteration. verbose
+17. **obedience**: compliance with an order, request, or law or submission to another's authority.
+18. **mediocre**: of only moderate quality; not very good.
+19. **shred**: tear or cut into shreds.
+20. **whatsoever**: at all (used for emphasis)
 
 # Phrase
 
 1. **What is meant by sth??**
 2. **get traction**: gain public recognition or acceptance
 3. **think of ... as**
+4. **give it a shot**
+5. **track down with sb**
+6. **apart from sb/sth**
+7. **tolerate/stand that feeling**
+8. **on the same page**
 
 
 
