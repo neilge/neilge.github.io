@@ -34,6 +34,7 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 18. **mediocre**: of only moderate quality; not very good.
 19. **shred**: tear or cut into shreds.
 20. **whatsoever**: at all (used for emphasis)
+21. **sluggish**: slow-moving or inactive.
 
 # Phrase
 
@@ -45,6 +46,9 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 6. **apart from sb/sth**
 7. **tolerate/stand that feeling**
 8. **on the same page**
+9. **on the spot**: without any delay, immediately
+10. **dilly dally**: waste time through aimless wandering or indecision.
+11. **be dilatory in sth/doing sth**
 
 
 
