@@ -35,6 +35,18 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 19. **shred**: tear or cut into shreds.
 20. **whatsoever**: at all (used for emphasis)
 21. **sluggish**: slow-moving or inactive.
+22. **motivation**
+23. **cardio**: cardiovascular exercise.
+24. **anaerobic**
+25. **sarcasm**: the use of irony to mock or convey contempt.
+26. **contempt**: the feeling that a person or a thing is beneath consideration, worthless, or deserving scorn.
+27. **dispicable**
+28. **regime**
+29. **shot**
+30. **desert**: abadon in a way considered disloyal or treacherous
+31. **waistline**
+32. **radical**
+
 
 # Phrase
 
@@ -49,6 +61,15 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 9. **on the spot**: without any delay, immediately
 10. **dilly dally**: waste time through aimless wandering or indecision.
 11. **be dilatory in sth/doing sth**
+12. **keep fit and healthy**
+13. **stick to** 
+14. **love handles**
+15. **skip out**
+16. **turn around**: turning in an opposite direction or position.
+17. **a coupe of**
+18. **a hell of difference**
+19. **better be going**
+20. **according to**: according to a plan or rule or system
 
 
 
