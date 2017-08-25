@@ -73,7 +73,7 @@ Please refer: [Git stash](https://www.atlassian.com/git/tutorials/git-stash)
 9. `git reset HEAD~`: undo the last commit
 10. `git clean [-f]`: remove files that are not tracked, The -f (force) option will also remove files, that are not tracked and are also being ignored by git though ignore-rule.
 11. `find . -name '*Email*' -exec git checkout {} \;`: checkout all the files that contains **Email** in its pathname in the current folder and its subfolder.
-
+12. `git reflog`: return to a previous status. Suppose the old commit was HEAD@{5} in the ref log, run `git reset --hard HEAD@{5}`
 ## Amend
 1. `git commit --amend`: Combine the staged changes with the previous commit and replace the previous commit with the resulting snapshot. Running this when there is nothing staged lets you edit the previous commit’s message without altering its snapshot.
 
