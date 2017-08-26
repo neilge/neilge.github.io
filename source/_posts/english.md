@@ -46,6 +46,7 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 30. **desert**: abadon in a way considered disloyal or treacherous
 31. **waistline**
 32. **radical**
+33. **obsolete**: no longer produced or used; out of date.
 
 
 # Phrase
@@ -70,6 +71,9 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 18. **a hell of difference**
 19. **better be going**
 20. **according to**: according to a plan or rule or system
+21. **sponge and soak up all the water**
+22. **start off**
+23. **tricks and tips**
 
 
 
@@ -90,3 +94,11 @@ Thin Thick
 房地产投资
 
 达成一致
+
+香港学习的经历
+
+中国学习的经历
+
+中国婚礼的传统
+
+潜意识的语言
