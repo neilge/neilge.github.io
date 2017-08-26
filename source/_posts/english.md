@@ -47,6 +47,11 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 31. **waistline**
 32. **radical**
 33. **obsolete**: no longer produced or used; out of date.
+34. **sleeve**: the part of a garment that wholly or partly covers a person's arm.
+35. **garment**: an item of clothing
+36. **outshine**: you upper body outshine your lower body
+37. **Stereotypes**: a widely held but fixed and oversimplified image or idea of a particular type of person or thing
+38. **laundry**
 
 
 # Phrase
@@ -74,6 +79,8 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 21. **sponge and soak up all the water**
 22. **start off**
 23. **tricks and tips**
+24. **from the first time ever**
+25. **out of the way**: finished
 
 
 

@@ -33,6 +33,8 @@ tags: English
 * get buff
 * squeeze the muscle
 * focus on the form
+* get lat strength up
+* bare essentails
 
 
 ## Common words
@@ -47,6 +49,8 @@ tags: English
 * dumbell
 * cables
 * bench(press) 
+* momentum
+* do shrug
 
 **Body part**
 
@@ -64,13 +68,23 @@ tags: English
 * calf
 * waist
 * bust
+* traps(trapezius)
 
 **form**
 
 * ponate and supinate
-* flex the joint
 * do plank
+* grip: grasp tightly
+* get a nice stretch
+* bicep curl
+* extend (flex) the joint
+* get nice tempo
+* do not neglect your grip either
+* squat
+* walking lunge
 
 
-## Conversation in Gym
+## Talk about Gym
+
+
 
