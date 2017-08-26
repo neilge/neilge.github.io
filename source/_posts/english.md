@@ -76,4 +76,17 @@ This is a summary of the words and phrases that I come cross in the daily life, 
 # Other useful link
 
 1. [Name of punctuation mark](http://sana.aalto.fi/awe/punctuation/symbols.html)
-2. 
+2.
+
+
+Room name
+
+Estate
+
+Thin Thick
+
+翻译： 难点不在于……而是……
+
+房地产投资
+
+达成一致
