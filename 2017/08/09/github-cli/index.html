@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Neil&#39;s Blog">
 <meta property="og:description" content="Terminology working directory staging environment repository  Create a git local repository and track to a remote repository create a local repository go to the folder that contain the files that we w">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-19T00:19:52.000Z">
+<meta property="og:updated_time" content="2017-08-25T22:36:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Cheatsheet">
 <meta name="twitter:description" content="Terminology working directory staging environment repository  Create a git local repository and track to a remote repository create a local repository go to the folder that contain the files that we w">
@@ -431,8 +431,7 @@
 <li><code>git reset HEAD~</code>: undo the last commit</li>
 <li><code>git clean [-f]</code>: remove files that are not tracked, The -f (force) option will also remove files, that are not tracked and are also being ignored by git though ignore-rule.</li>
 <li><code>find . -name &#39;*Email*&#39; -exec git checkout {} \;</code>: checkout all the files that contains <strong>Email</strong> in its pathname in the current folder and its subfolder.</li>
-</ol>
-<h2 id="Amend"><a href="#Amend" class="headerlink" title="Amend"></a>Amend</h2><ol>
+<li><code>git reflog</code>: return to a previous status. Suppose the old commit was HEAD@{5} in the ref log, run <code>git reset --hard HEAD@{5}</code><h2 id="Amend"><a href="#Amend" class="headerlink" title="Amend"></a>Amend</h2></li>
 <li><code>git commit --amend</code>: Combine the staged changes with the previous commit and replace the previous commit with the resulting snapshot. Running this when there is nothing staged lets you edit the previous commit’s message without altering its snapshot.</li>
 </ol>
 <h2 id="Diff"><a href="#Diff" class="headerlink" title="Diff"></a>Diff</h2><ol>
@@ -652,7 +651,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
