@@ -1,3 +1,10 @@
+---
+title: note
+date: 2017-08-22 07:15:07
+visible: hide
+tags: Note
+---
+
 # Notes
 
 [toc]
@@ -54,21 +61,21 @@ neilge-auiserver-gamma-iad.iad.proxy.amazon.com
 ## Working on new package
 
 1. ***Add a new pacakge***: `brazil ws --remove --package <Package Name> --branch <branch name>`
-1. ***Override package***: Go the gamma environment, click edit next to Local override. In the Edit Local Overrides, add the new package as a new local override. Reactivate environment after that (In apollo, click the activate link or run `sudo /apollo/bin/runCommand -e HorizontePlatform -a Activate` in terminal of gamma stage). 
+1. ***Override package***: Go the gamma environment, click edit next to Local override. In the Edit Local Overrides, add the new package as a new local override. Reactivate environment after that (In apollo, click the activate link or run `sudo /apollo/bin/runCommand -e HorizontePlatform -a Activate` in terminal of gamma stage).
 
-2. ***Symlink to override tomcat jsps (views and tags)***: 
+2. ***Symlink to override tomcat jsps (views and tags)***:
 
 	```bash
 	sudo rm -rf /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/views/accountdetails && sudo ln -s /home/neilge/workspace/arya/src/AudibleWebAccountDetailsApplication/src/main/resources/WEB-INF/views/accountdetails /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/views/accountdetails && sudo rm -rf /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/tags/accountdetails && sudo ln -s /home/neilge/workspace/arya/src/AudibleWebAccountDetailsApplication/src/main/resources/WEB-INF/tags/accountdetails /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/tags/accountdetails
 	```
-	
+
 	```bash
 	sudo rm -rf /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/views/navigation && sudo ln -s /home/neilge/workspace/arya/src/AudibleWebNavigationApplication/src/main/resources/WEB-INF/views/navigation /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/views/navigation && sudo rm -rf /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/tags/navigation && sudo ln -s /home/neilge/workspace/arya/src/AudibleWebNavigationApplication/src/main/resources/WEB-INF/tags/navigation /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/tags/navigation
 	```
 
 3. ***Set jsp hotloading***: open `/local/apollo/var/env/HorizontePlatform/tomcat/conf/web.xml` in gamma and set `development=true`
 
-4. ***Restart tomcat***: 
+4. ***Restart tomcat***:
 
 	```bash
 	sudo sudo -u nobody /apollo/bin/env /apollo/env/HorizontePlatform/bin/forceTomcatRestart
@@ -78,17 +85,17 @@ neilge-auiserver-gamma-iad.iad.proxy.amazon.com
 ## Changing backend code
 
 1. ***Build the package in work space***: `brazil-build` the package, `brazil-build apollo-pkg` the package.
-2. ***Sync the code from Desktop to Gamma***: 
+2. ***Sync the code from Desktop to Gamma***:
 
 	```bash
 	rsync -avz --delete /home/neilge/workspace/ neilge-gamma-1a-f7e07770.us-east-1.amazon.com:/home/neilge/workspace/
 	```
-3. ***Restart tomcat***: 
+3. ***Restart tomcat***:
 
 	```bash
 	sudo sudo -u nobody /apollo/bin/env /apollo/env/HorizontePlatform/bin/forceTomcatRestart
 	```
-	
+
 ## Changing the frontend code
 
 Only need to do the 2, 3 steps of ***Changing backend code***
@@ -100,7 +107,7 @@ Sometimes we need a updated package that has not been in Gamma yet, then we need
 
 ### Build package
 
-* Go to [Package Builder](build.amazon.com), select the Version Set the package will be built in (in most of the cases is `AudibleWebsite/ace`). 
+* Go to [Package Builder](build.amazon.com), select the Version Set the package will be built in (in most of the cases is `AudibleWebsite/ace`).
 * Select the package and proper branch and change in the package we want to add.
 * Select Audo-merge Dependencies
 * Submit Build Request
