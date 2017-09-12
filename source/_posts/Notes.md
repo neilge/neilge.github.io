@@ -119,6 +119,24 @@ Sometimes we need a updated package that has not been in Gamma yet, then we need
 * Skip to review
 * Create delpoyment
 
+
+## Using Symphony to copy a new placement
+
+1. Select a placement you want to copy and click into it.
+2. Click option and select **Copy to Clipboard**
+3. Go back to campaign page where you want to add this placement
+4. Click Add Placementn and select **Paste From Clipboard**
+5. The page will be redirect to adding new placement page
+6. Select the site you want to choose, CA or US
+7. Click **Override** in Type and make sure type is guaranteed and 100%
+8. In the page targeting section, make sure the Browse Node value is the page Id we set in the code.
+
+## About the country
+
+1. In symphony we can select country when we create a placement
+2. We can also change the content shows in different country by using LMS
+
+
 ## Account info
 
 ### Audible account
@@ -162,9 +180,13 @@ brazil ws --remove -p AudibleCombinedPurchaseHistoryLib
 
 ## Other info
 
-### View in mobile model
+### View in mobile mode
 
 Add `?referrerPlatform=wasabi` after the url
+
+### Turn on debug mode
+
+Add `?debug=1` after the url
 
 
 ## Memo
