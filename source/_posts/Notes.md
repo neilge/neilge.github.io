@@ -58,6 +58,23 @@ neilge-auiserver-gamma-iad.iad.proxy.amazon.com
 
 [VIP home site](https://vip-management.amazon.com/vipmgmt/ManageVips.mhtml)
 
+
+ssh into your gamma and go to folder '/apollo/env/HorizontePlatform/brazil-config/global'
+
+edit AmazonUIAssetInjector.cfg
+
+For 
+
+`*.*.BSFSRHttpConnectionInfo.AUIDevServerBase`
+
+and
+ 
+`*.*.BSFSRHttpConnectionInfo.AUIDevServer` 
+
+make sure the 
+
+`servers = neilge-auiserver-gamma.iad.amazon.com`
+
 ## Working on new package
 
 1. ***Add a new pacakge***: `brazil ws --remove --package <Package Name> --branch <branch name>`
@@ -204,3 +221,11 @@ AudibleAddressAndPaymentsInterface
 
 ## Log
 /apollo/env/HorizontePlatform/var/output/logs/
+
+
+### Timber. Run on desktop** 
+
+* /apollo/env/envImprovement/bin/sshenv -e TimberFS/IAD/Audible
+
+### Find files contains the log 
+find -name \*.gz -print0 | xargs -0 zgrep "No configuration found for service: AudibleCustomerOnboardingService, realm: CAAMAZON
