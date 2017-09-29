@@ -7,7 +7,7 @@ tags: Note
 
 # Notes
 
-[toc]
+[/toc]
 
 ## Desktop
 
@@ -74,6 +74,15 @@ and
 make sure the 
 
 `servers = neilge-auiserver-gamma.iad.amazon.com`
+
+### To rsync the built assets to another host's DevServer environment
+
+`AUIDS_HOST=neilge-gamma-1a-f7e07770.us-east-1.amazon.com brazil-build dev`
+
+If you want to keep update the change in code, use `--guard`
+
+`AUIDS_HOST=neilge-gamma-1a-f7e07770.us-east-1.amazon.com brazil-build dev --guard`
+
 
 ## Working on new package
 
@@ -206,13 +215,17 @@ Add `?referrerPlatform=wasabi` after the url
 Add `?debug=1` after the url
 
 
+
 ## Memo
 
 When Bing vip to certificate
 
 Choose Amazon CAM as team
 
-AUIDS_HOST=neilge-gamma-1a-f7e07770.us-east-1.amazon.com brazil-build
+
+
+AUIDS_HOST="$ARYA_GAMMA_HOST" \
+brazil-build dev $@
 
 AudibleMembershipSubscriptionApplication
 
