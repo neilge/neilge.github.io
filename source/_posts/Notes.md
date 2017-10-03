@@ -7,8 +7,6 @@ tags: Note
 
 # Notes
 
-[/toc]
-
 ## Desktop
 
 ### Log into desktop
@@ -223,10 +221,6 @@ When Bing vip to certificate
 Choose Amazon CAM as team
 
 
-
-AUIDS_HOST="$ARYA_GAMMA_HOST" \
-brazil-build dev $@
-
 AudibleMembershipSubscriptionApplication
 
 AudibleAddressAndPaymentsLib
@@ -242,3 +236,49 @@ AudibleAddressAndPaymentsInterface
 
 ### Find files contains the log 
 find -name \*.gz -print0 | xargs -0 zgrep "No configuration found for service: AudibleCustomerOnboardingService, realm: CAAMAZON
+
+## String tools
+
+There is a old string manager: audible-strings.amazon.com. If the translator cannot find the associated value for a specific key in current market, it will go to audible-strings.amazon.com to fetch data.
+
+## Weblab
+
+A tool can help us to gradually dialed up the percentage of a page. And it also can be used as a tool to do A/B testing. It can help us to switch from simple stack to arya.
+
+### How to create a weblab
+
+1. Go to weblab.amazon.com and click Create a New Weblab
+2. Fill all the necessary content. 
+	* **PREFIX** would be the prefix of your weblab Id, the real Id is the PREFIX follow by a serious digits. 
+	* **WEBLAB TITLE** is the name of this weblab. 
+	* **BUSINESS GROUP** is Audible CAM. 
+	* **REMEDY CTI**  C: Audible, T: Website, I: Account Details and Settings. 
+	* **PRIMARY OWNER**: yourself
+	* **SECONDARY OWNER**: Team member
+	* **OBSERVERS**: Your product manager
+3. In the **Treatments** add two treatments and screenshots for each treatment
+	* C is controller. The associated page will show when weblab is off.
+	* T1 is first treatment. The associated page will show when weblab is on.
+4. Activate the webpage on CAAudible and USAudible normally.
+
+### How to use weblab
+
+1. We can add weblab to a placement. When editing a placement we can add a weblab rule and add the weblab Id and associated treament Id into it.
+2. We can also exclude a weblab from a placement. Similar to adding weblab, we add a weblab rule in exclude and add the weblab Id and its associated treatment Id.
+
+### How to turn on and off of weblab
+
+1. We cannot launch a treatment (that is the job of QA and PM). But we can also test the weblab by using weblab bookmarklet.
+2. We can use bookmarklet builder to build bookmark to enter c or t1.
+3. Or we can just use bookmarklet to go into page with a weblab.
+
+### What is the relation between weblab and symphony content
+
+Each campaign contains one or more symphony contents in the form of key value pair. These symphony contents are only belong to this campaign, while this campaign can be applied to many different placements. Each placement is actually a slot (working as widget in code) in a page. We can set rules and excludes to specify the logic of the placement.
+
+### How to debug in web page
+
+1. In arya, we can turn on debug mode by add paremeter `debug=1` into URL
+2. In santana, we use `inspect=true`
+3. If we want to get the LMS key for strings in this page, using `stringDebug=1` 
+4. When you want to find the log correspond to the page. Turn debug on and inspect the page, then search 'debugInfo' in Elements, the host name would be the host you may want to ssh.
