@@ -34,15 +34,22 @@ neilge-gamma-1a-f7e07770.us-east-1.amazon.com
 ### Alias
 neilge-platform-preprod.audible.com
 
-### VIP
+### VIP 
+
+#### DNS Name: 
+
 neilge-arya.iad.amazon.com
+
+#### Proxy
+
+neilge-arya-iad.iad.proxy.amazon.com
 
 [VIP home site](https://vip-management.amazon.com/vipmgmt/ManageVips.mhtml)
 
 ### CName:
 
-neilge-platform-preprod.audible.com -> neilge-arya-iad.iad.proxy.amazon.com 
-neilge-platform-preprod.audible.ca -> neilge-arya-iad.iad.proxy.amazon.com 
+* neilge-platform-preprod.audible.com -> neilge-arya-iad.iad.proxy.amazon.com 
+* neilge-platform-preprod.audible.ca -> neilge-arya-iad.iad.proxy.amazon.com 
 
 ## AmazonUIDevServer
 
