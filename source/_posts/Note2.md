@@ -52,11 +52,11 @@ visible: hide
 * Password: Gxy#656690
 * Voice PIN: 0225
 
-Security Questions: 
+Security Questions:
 
 * What was the name of your first pet?
 * Shinny
-* In what city were you born? 
+* In what city were you born?
 * Shenyang
 * What is your zip or postal code?
 * 07029
