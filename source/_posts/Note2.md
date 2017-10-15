@@ -1,7 +1,7 @@
 ---
 title: Note2
 date: 2017-10-14 13:43:05
-tags:
+tags: Note
 visible: hide
 ---
 
