@@ -89,9 +89,25 @@ If you want to keep update the change in code, use `--guard`
 `AUIDS_HOST=neilge-gamma-1a-f7e07770.us-east-1.amazon.com brazil-build dev --guard`
 
 
-## Working on new package
+## Working on new workspace and package
 
-1. ***Add a new pacakge***: `brazil ws --remove --package <Package Name> --branch <branch name>`
+1. ***Add a new workspace and pacakge***: 
+
+	```
+	brazil workspace create --name <WorkspaceName> --versionSet <VersionSetName>
+	cd <WorkspaceName> 
+	kinit -f 
+	brazil workspace use --package <PackageName>
+	```
+	```
+	brazil ws use -vs ...
+	brazil ws use -p ...
+	brazil ws remove -p ...
+	```
+
+
+2. ***Delete a package***
+`brazil ws --remove --package <Package Name> --branch <branch name>`
 1. ***Override package***: Go the gamma environment, click edit next to Local override. In the Edit Local Overrides, add the new package as a new local override. Reactivate environment after that (In apollo, click the activate link or run `sudo /apollo/bin/runCommand -e HorizontePlatform -a Activate` in terminal of gamma stage).
 
 2. ***Symlink to override tomcat jsps (views and tags)***:
@@ -102,6 +118,10 @@ If you want to keep update the change in code, use `--guard`
 
 	```bash
 	sudo rm -rf /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/views/navigation && sudo ln -s /home/neilge/workspace/arya/src/AudibleWebNavigationApplication/src/main/resources/WEB-INF/views/navigation /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/views/navigation && sudo rm -rf /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/tags/navigation && sudo ln -s /home/neilge/workspace/arya/src/AudibleWebNavigationApplication/src/main/resources/WEB-INF/tags/navigation /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/tags/navigation
+	```
+	
+	```bash
+	sudo rm -rf /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/views/paymentswidget && sudo ln -s /home/neilge/workspace/arya/src/AudiblePaymentsWidgetApplication/src/main/resources/WEB-INF/views/paymentswidget /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/views/paymentswidget && sudo rm -rf /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/tags/paymentswidget && sudo ln -s /home/neilge/workspace/arya/src/AudiblePaymentsWidgetApplication/src/main/resources/WEB-INF/tags/paymentswidget /apollo/env/HorizontePlatform/var/tomcat/webapps/HorizonteWebApp/WEB-INF/tags/paymentswidget
 	```
 
 3. ***Set jsp hotloading***: open `/local/apollo/var/env/HorizontePlatform/tomcat/conf/web.xml` in gamma and set `development=true`
@@ -288,4 +308,4 @@ Each campaign contains one or more symphony contents in the form of key value pa
 1. In arya, we can turn on debug mode by add paremeter `debug=1` into URL
 2. In santana, we use `inspect=true`
 3. If we want to get the LMS key for strings in this page, using `stringDebug=1` 
-4. When you want to find the log correspond to the page. Turn debug on and inspect the page, then search 'debugInfo' in Elements, the host name would be the host you may want to ssh.
+### 4. When you want to find the log correspond to the page. Turn debug on and inspect the page, then search 'debugInfo' in Elements, the host name would be the host you may want to ssh.

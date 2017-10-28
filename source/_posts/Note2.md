@@ -68,8 +68,9 @@ Security Questions:
 ## Name of meetings
 
 
-Sprint Grooming
-Sprint retrospective
+* Sprint Grooming
+* Sprint retrospective
+* Dev orcs??
 
 ## Owned Packages
 
