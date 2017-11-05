@@ -5,6 +5,8 @@ visible: hide
 tags: Note
 ---
 
+[toc]
+
 # Notes
 
 ## Desktop
@@ -67,6 +69,8 @@ neilge-auiserver-gamma-iad.iad.proxy.amazon.com
 ssh into your gamma and go to folder '/apollo/env/HorizontePlatform/brazil-config/global'
 
 edit AmazonUIAssetInjector.cfg
+
+/apollo/env/HorizontePlatform/brazil-config/global/AmazonUIAssetInjector.cfg
 
 For 
 
