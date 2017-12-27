@@ -17,7 +17,3 @@ password: tswc941=
 
 3. Anvil: the place to test our code security
 4. In jira: Move the task to done in the board first and set it is done and check the burn down chart
-
-
-
-
