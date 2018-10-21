@@ -1,5 +1,5 @@
 ---
-title: jack-ryan
+title: Jack Ryan
 date: 2018-10-20 21:59:49
 tags: Diray
 ---
