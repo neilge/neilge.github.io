@@ -1,7 +1,7 @@
 ---
 title: Jack Ryan
 date: 2018-10-20 21:59:49
-tags: Diray
+tags: Diary
 ---
 
 Honestly, I don't like the roles who alway think they represent the justice and look down on others who differ from them. 
